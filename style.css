@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #f8eaf1;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+.scrapbook {
+  background: #fffdf8;
+  width: min(90%, 600px);
+  padding: 60px 30px;
+  text-align: center;
+  border: 2px solid #ead8df;
+  box-shadow: 8px 8px 0 #d9b9c7;
+  transform: rotate(-1deg);
+  position: relative;
+  z-index: 2;
+}
+
+.small-text {
+  font-size: 15px;
+  color: #8d6b78;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(42px, 9vw, 75px);
+  line-height: 1;
+  color: #55404a;
+  margin-bottom: 20px;
+}
+
+.date {
+  color: #9a7081;
+  font-size: 17px;
+  margin-bottom: 35px;
+}
+
+button {
+  border: none;
+  background: #e9a9c2;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #c887a2;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 #c887a2;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 #c887a2;
+}
+
+.sticker {
+  position: absolute;
+  font-size: 45px;
+  z-index: 3;
+  animation: float 3s ease-in-out infinite;
+}
+
+.sticker1 {
+  top: 12%;
+  left: 15%;
+}
+
+.sticker2 {
+  top: 18%;
+  right: 15%;
+  animation-delay: 0.5s;
+}
+
+.sticker3 {
+  bottom: 15%;
+  left: 18%;
+  animation-delay: 1s;
+}
+
+.sticker4 {
+  bottom: 12%;
+  right: 18%;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .scrapbook {
+    padding: 45px 20px;
+  }
+
+  .sticker {
+    font-size: 32px;
+  }
+}
