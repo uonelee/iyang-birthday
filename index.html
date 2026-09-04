@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,8 @@
 
 <body>
 
-  <div class="cover">
+  <!-- COVER -->
+  <section class="page cover" id="cover">
 
     <div class="sticker sticker1">🩷</div>
     <div class="sticker sticker2">🩵</div>
@@ -20,19 +22,267 @@
 
     <div class="scrapbook">
 
-      <p class="small-text">a little scrapbook made especially for you ♡</p>
+      <p class="small-text">
+        i made this little thing for you ♡
+      </p>
 
-      <h1>happy birthday,<br>iyang! ♡</h1>
+      <h1>
+        happy birthday,<br>
+        iyang! ♡
+      </h1>
 
-      <p class="date">october 1, 2026</p>
+      <p class="date">
+        october 1, 2026
+      </p>
 
-      <button onclick="openGift()">
+      <button id="giftButton">
         🎁 open your gift
       </button>
 
     </div>
 
-  </div>
+  </section>
+
+
+  <!-- OUR STORY -->
+  <section class="page story" id="story">
+
+    <div class="scrapbook">
+
+      <p class="small-text">page 1 ♡</p>
+
+      <h2>how it started</h2>
+
+      <p>
+        we met back in november 2023.
+      </p>
+
+      <p>
+        i didn't know that meeting you would
+        lead to so many memories.
+      </p>
+
+      <div class="memory-placeholder">
+        📸
+        <br>
+        <span>put our photo here</span>
+      </div>
+
+      <button onclick="nextPage('memories')">
+        next →
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- MEMORIES -->
+  <section class="page memories" id="memories">
+
+    <div class="scrapbook">
+
+      <p class="small-text">page 2 ♡</p>
+
+      <h2>our memories</h2>
+
+      <div class="memory-grid">
+
+        <div class="memory-card">
+          📷
+          <p>our first memory</p>
+        </div>
+
+        <div class="memory-card">
+          📷
+          <p>one of my favorites</p>
+        </div>
+
+        <div class="memory-card">
+          📷
+          <p>another memory</p>
+        </div>
+
+        <div class="memory-card">
+          📷
+          <p>just us</p>
+        </div>
+
+      </div>
+
+      <button onclick="nextPage('love')">
+        next →
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- THINGS I LOVE -->
+  <section class="page love" id="love">
+
+    <div class="scrapbook">
+
+      <p class="small-text">page 3 ♡</p>
+
+      <h2>things i like about you</h2>
+
+      <div class="love-list">
+
+        <p>♡ you make me laugh</p>
+
+        <p>♡ i like talking to you</p>
+
+        <p>♡ you care a lot</p>
+
+        <p>♡ i like spending time with you</p>
+
+        <p>♡ i just like having you around</p>
+
+      </div>
+
+      <button onclick="nextPage('letter')">
+        next →
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- LETTER -->
+  <section class="page letter" id="letter">
+
+    <div class="scrapbook">
+
+      <p class="small-text">page 4 ♡</p>
+
+      <h2>a little letter</h2>
+
+      <div class="letter-paper">
+
+        <p>
+          dear iyang,
+        </p>
+
+        <p>
+          happy birthdayyy!
+          i hope you're having a good day today.
+        </p>
+
+        <p>
+          thank you sa lahat ng memories natin.
+          kahit yung simple moments lang,
+          i really appreciate them.
+        </p>
+
+        <p>
+          i'm happy that i got to know you
+          and spend so many moments with you.
+        </p>
+
+        <p>
+          enjoy your day and always take care of yourself.
+        </p>
+
+        <p>
+          happy birthday again, iyang. ♡
+        </p>
+
+        <p>
+          — me
+        </p>
+
+      </div>
+
+      <button onclick="nextPage('messages')">
+        next →
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- MESSAGES -->
+  <section class="page messages" id="messages">
+
+    <div class="scrapbook">
+
+      <p class="small-text">page 5 ♡</p>
+
+      <h2>messages for you</h2>
+
+      <p>
+        i asked some people to leave
+        a little message for you.
+      </p>
+
+      <div class="message-card">
+
+        <h3>from someone special ♡</h3>
+
+        <p>
+          your message will go here.
+        </p>
+
+      </div>
+
+      <div class="message-card">
+
+        <h3>from your friend ♡</h3>
+
+        <p>
+          your message will go here.
+        </p>
+
+      </div>
+
+      <button onclick="nextPage('final')">
+        last page →
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL PAGE -->
+  <section class="page final" id="final">
+
+    <div class="scrapbook">
+
+      <div class="tulips">
+        🌷 🩷 🩵 🌷
+      </div>
+
+      <p class="small-text">
+        last page ♡
+      </p>
+
+      <h2>happy birthday, iyang!</h2>
+
+      <p>
+        i hope you enjoyed this little surprise.
+      </p>
+
+      <p>
+        sana marami pa tayong memories together.
+      </p>
+
+      <p class="final-love">
+        enjoy your dayyy ♡
+      </p>
+
+      <div class="tulips">
+        🩵 🌷 🩷
+      </div>
+
+    </div>
+
+  </section>
+
 
   <script src="script.js"></script>
 
