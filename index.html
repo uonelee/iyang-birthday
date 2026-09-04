@@ -1,10 +1,12 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Happy Birthday Iyang ♡</title>
+  <title>Happy Birthday My Iyang ♡</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -27,7 +29,7 @@
 
       <h1>
         happy birthday,<br>
-        iyang! ♡
+        my iyang ♡
       </h1>
 
       <p class="date">
@@ -53,23 +55,47 @@
       <h2>how it started</h2>
 
       <p>
-        we met back in november 2023.
+        we met at a school event.
       </p>
 
       <p>
-        i didn't know that meeting you would
-        lead to so many memories.
+        i still remember how you offered me a seat that day.
+        it was such a simple thing, but somehow,
+        that little moment stayed with me.
+      </p>
+
+      <p>
+        and honestly, that's where it started.
+      </p>
+
+      <p>
+        i slowly started having a crush on you,
+        without even realizing how much that one small
+        moment would mean to me.
+      </p>
+
+      <p>
+        funny how something so simple can become
+        the beginning of so many memories. ♡
       </p>
 
       <div class="memory-placeholder">
         📸
         <br>
-        <span>put our photo here</span>
+        <span>put our photo from that time here</span>
       </div>
 
-      <button onclick="nextPage('memories')">
-        next →
-      </button>
+      <div class="navigation">
+
+        <button onclick="nextPage('cover')">
+          ← back
+        </button>
+
+        <button onclick="nextPage('memories')">
+          next →
+        </button>
+
+      </div>
 
     </div>
 
@@ -109,16 +135,24 @@
 
       </div>
 
-      <button onclick="nextPage('love')">
-        next →
-      </button>
+      <div class="navigation">
+
+        <button onclick="nextPage('story')">
+          ← back
+        </button>
+
+        <button onclick="nextPage('love')">
+          next →
+        </button>
+
+      </div>
 
     </div>
 
   </section>
 
 
-  <!-- THINGS I LOVE -->
+  <!-- THINGS I LIKE -->
   <section class="page love" id="love">
 
     <div class="scrapbook">
@@ -141,9 +175,17 @@
 
       </div>
 
-      <button onclick="nextPage('letter')">
-        next →
-      </button>
+      <div class="navigation">
+
+        <button onclick="nextPage('memories')">
+          ← back
+        </button>
+
+        <button onclick="nextPage('letter')">
+          next →
+        </button>
+
+      </div>
 
     </div>
 
@@ -195,9 +237,17 @@
 
       </div>
 
-      <button onclick="nextPage('messages')">
-        next →
-      </button>
+      <div class="navigation">
+
+        <button onclick="nextPage('love')">
+          ← back
+        </button>
+
+        <button onclick="nextPage('messages')">
+          next →
+        </button>
+
+      </div>
 
     </div>
 
@@ -238,9 +288,17 @@
 
       </div>
 
-      <button onclick="nextPage('final')">
-        last page →
-      </button>
+      <div class="navigation">
+
+        <button onclick="nextPage('letter')">
+          ← back
+        </button>
+
+        <button onclick="nextPage('final')">
+          last page →
+        </button>
+
+      </div>
 
     </div>
 
@@ -260,7 +318,9 @@
         last page ♡
       </p>
 
-      <h2>happy birthday, iyang!</h2>
+      <h2>
+        happy birthday, iyang!
+      </h2>
 
       <p>
         i hope you enjoyed this little surprise.
@@ -278,6 +338,10 @@
         🩵 🌷 🩷
       </div>
 
+      <button onclick="nextPage('cover')">
+        ↩ start again
+      </button>
+
     </div>
 
   </section>
@@ -286,4 +350,6 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
+```
