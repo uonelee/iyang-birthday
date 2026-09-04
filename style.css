@@ -1,276 +1,81 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* seal theme 🦭 */
 
-body {
-  font-family: Georgia, serif;
-  background: #f9eaf1;
-  color: #55404a;
-  min-height: 100vh;
-}
-
-/* all pages */
-
-.page {
-  min-height: 100vh;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  padding: 25px;
-  position: relative;
-  overflow: hidden;
-}
-
-.page.active {
-  display: flex;
-}
-
-/* scrapbook paper */
-
-.scrapbook {
-  background: #fffdf7;
-  width: min(90%, 650px);
-  max-height: 90vh;
-  overflow-y: auto;
-  padding: 45px 35px;
-  text-align: center;
-  border: 2px solid #ead9df;
-  box-shadow: 8px 8px 0 #d8b9c7;
-  transform: rotate(-1deg);
-  position: relative;
-  z-index: 2;
-}
-
-/* text */
-
-.small-text {
-  color: #9a7182;
-  font-size: 15px;
-  margin-bottom: 15px;
-}
-
-h1 {
-  font-size: clamp(45px, 10vw, 75px);
-  line-height: 1;
-  margin-bottom: 20px;
-  color: #614955;
-}
-
-h2 {
-  font-size: clamp(32px, 7vw, 48px);
-  margin-bottom: 25px;
-  color: #614955;
-}
-
-p {
-  font-size: 17px;
-  line-height: 1.7;
-  margin-bottom: 18px;
-}
-
-.date {
-  color: #9a7182;
-  margin-bottom: 30px;
-}
-
-/* buttons */
-
-button {
-  border: none;
-  background: #e5a5bd;
-  color: white;
-  padding: 13px 24px;
-  border-radius: 30px;
-  font-family: Georgia, serif;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-  box-shadow: 0 5px 0 #c789a2;
-  transition: 0.2s;
-}
-
-button:hover {
-  transform: translateY(-3px);
-}
-
-button:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 #c789a2;
-}
-
-/* stickers */
-
-.sticker {
+.seal {
   position: absolute;
-  font-size: 45px;
+  font-size: 55px;
   z-index: 3;
-  animation: float 3s ease-in-out infinite;
+  animation: sealFloat 3s ease-in-out infinite;
 }
 
-.sticker1 {
-  top: 10%;
-  left: 12%;
+.seal1 {
+  top: 25%;
+  left: 8%;
 }
 
-.sticker2 {
-  top: 15%;
-  right: 12%;
-  animation-delay: .5s;
-}
-
-.sticker3 {
-  bottom: 13%;
-  left: 15%;
+.seal2 {
+  bottom: 20%;
+  right: 8%;
   animation-delay: 1s;
 }
 
-.sticker4 {
-  bottom: 10%;
-  right: 15%;
-  animation-delay: 1.5s;
+.page-seal {
+  top: 8%;
+  left: 8%;
 }
 
-@keyframes float {
+.seal-right {
+  left: auto;
+  right: 8%;
+}
+
+.seal-title {
+  font-size: 50px;
+  margin-bottom: 10px;
+  animation: sealFloat 3s ease-in-out infinite;
+}
+
+.seal-final-left {
+  bottom: 12%;
+  left: 8%;
+}
+
+.seal-final-right {
+  top: 12%;
+  right: 8%;
+  animation-delay: 1s;
+}
+
+@keyframes sealFloat {
   0%, 100% {
     transform: translateY(0) rotate(-5deg);
   }
 
   50% {
-    transform: translateY(-10px) rotate(5deg);
+    transform: translateY(-12px) rotate(5deg);
   }
 }
-
-/* memory section */
-
-.memory-placeholder {
-  background: #f4e3e9;
-  border: 2px dashed #d4a9b9;
-  padding: 50px 20px;
-  margin: 25px auto;
-  max-width: 400px;
-  font-size: 45px;
-}
-
-.memory-placeholder span {
-  font-size: 14px;
-  color: #9a7182;
-}
-
-.memory-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin: 25px 0;
-}
-
-.memory-card {
-  background: #f6e7ec;
-  padding: 35px 15px;
-  border: 2px solid #ead1da;
-  transform: rotate(-1deg);
-}
-
-.memory-card:nth-child(even) {
-  transform: rotate(1deg);
-}
-
-.memory-card p {
-  font-size: 14px;
-  margin: 10px 0 0;
-}
-
-/* things i love */
-
-.love-list {
-  text-align: left;
-  background: #f8edf1;
-  padding: 20px 25px;
-  margin: 20px 0;
-}
-
-.love-list p {
-  margin-bottom: 12px;
-}
-
-/* letter */
-
-.letter-paper {
-  background: #fff9e8;
-  padding: 30px;
-  text-align: left;
-  margin: 25px 0;
-  border: 1px solid #e7d7b9;
-  box-shadow: 3px 3px 0 #e4d5bd;
-}
-
-.letter-paper p {
-  font-size: 16px;
-}
-
-/* messages */
-
-.message-card {
-  background: #eef5fa;
-  padding: 22px;
-  margin: 18px 0;
-  border: 2px solid #cbdde8;
-  text-align: left;
-}
-
-.message-card h3 {
-  margin-bottom: 10px;
-  color: #527080;
-}
-
-.message-card p {
-  margin: 0;
-}
-
-/* final */
-
-.final-love {
-  font-size: 20px;
-  color: #c47796;
-  margin-top: 25px;
-}
-
-.tulips {
-  font-size: 35px;
-  margin: 15px 0;
-}
-
-/* mobile */
 
 @media (max-width: 600px) {
 
-  .page {
-    padding: 15px;
+  .seal {
+    font-size: 38px;
   }
 
-  .scrapbook {
-    width: 95%;
-    padding: 35px 22px;
+  .seal1 {
+    left: 3%;
   }
 
-  .sticker {
-    font-size: 30px;
+  .seal2 {
+    right: 3%;
   }
 
-  .sticker1 {
-    left: 5%;
+  .page-seal {
+    top: 3%;
+    left: 4%;
   }
 
-  .sticker2 {
-    right: 5%;
-  }
-
-  .memory-grid {
-    grid-template-columns: 1fr;
-  }
-
-  p {
-    font-size: 16px;
+  .seal-right {
+    left: auto;
+    right: 4%;
   }
 }
