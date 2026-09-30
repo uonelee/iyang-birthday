@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,39 +12,46 @@
 
 <body>
 
-
   <!-- =========================
        COVER
   ========================== -->
 
   <section class="page active" id="cover">
 
-    <div class="sticker sticker1">🎀</div>
-    <div class="sticker sticker2">💙</div>
-    <div class="sticker sticker3">🌷</div>
-    <div class="sticker sticker4">🩷</div>
+    <div class="sticker sticker1">🌷</div>
+    <div class="sticker sticker2">🎀</div>
+    <div class="sticker sticker3">🩷</div>
+    <div class="sticker sticker4">💙</div>
 
     <div class="seal seal1">🦭</div>
     <div class="seal seal2">🦭</div>
 
     <div class="scrapbook">
 
-      <div class="seal-title">🦭</div>
-
       <p class="small-text">
-        i made this little thing for you ♡
+        a little something i made for you
       </p>
 
+      <div class="seal-title">
+        🦭
+      </div>
+
       <h1>
-        Happy Birthday<br>
-        My Iyang ♡
+        happy birthday<br>
+        my iyang ♡
       </h1>
 
       <p class="date">
         october 1, 2026
       </p>
 
-      <button id="giftButton">
+      <p>
+        i made this little thing for you ♡
+      </p>
+
+      <!-- FIXED GIFT BUTTON -->
+
+      <button id="giftButton" onclick="openGift()">
         🎁 open your gift
       </button>
 
@@ -54,27 +60,41 @@
   </section>
 
 
-
   <!-- =========================
        GIFT REVEAL
   ========================== -->
 
   <section class="page gift-reveal" id="giftReveal">
 
-    <div class="seal page-seal">🦭</div>
-    <div class="seal seal-right">🦭</div>
+    <div class="seal page-seal">
+      🦭
+    </div>
+
+    <div class="seal seal-right">
+      🦭
+    </div>
 
     <div class="scrapbook">
 
-      <p class="small-text gift-opening-text">
-        wait... there's something inside ♡
-      </p>
-
-      <h2>🎁</h2>
-
       <div class="gift-scene">
 
+        <p class="small-text gift-opening-text">
+          okay... here's your first surprise ♡
+        </p>
+
+        <!-- GIFT BOX -->
+
         <div class="gift-box" id="giftBox">
+
+          <div class="gift-lid">
+
+            <div class="gift-bow">
+              🎀
+            </div>
+
+            <div class="ribbon-horizontal"></div>
+
+          </div>
 
           <div class="gift-body">
 
@@ -82,18 +102,10 @@
 
           </div>
 
-          <div class="gift-lid">
-
-            <div class="ribbon-horizontal"></div>
-
-            <div class="gift-bow">
-              🎀
-            </div>
-
-          </div>
-
         </div>
 
+
+        <!-- GIFT REVEAL MESSAGE -->
 
         <div class="gift-message" id="giftMessage">
 
@@ -101,17 +113,18 @@
 
             <img
               src="images/gift.jpg"
-              alt="Iyang's birthday gift"
+              alt="Your birthday gift"
             >
 
           </div>
 
-          <p>
+          <h2>
             a little something for you ♡
+          </h2>
+
+          <p>
+            i hope you like it hehe 🦭
           </p>
-
-
-          <!-- GIFT NAVIGATION -->
 
           <div class="navigation">
 
@@ -120,7 +133,7 @@
             </button>
 
             <button onclick="nextPage('story')">
-              continue ♡
+              continue →
             </button>
 
           </div>
@@ -134,50 +147,45 @@
   </section>
 
 
-
   <!-- =========================
        STORY
   ========================== -->
 
   <section class="page" id="story">
 
-    <div class="seal page-seal">🦭</div>
+    <div class="seal page-seal">
+      🦭
+    </div>
 
     <div class="scrapbook">
 
       <p class="small-text">
-        how it all started ♡
+        how it started ♡
       </p>
 
       <h2>
         our little story
       </h2>
 
-
       <div class="letter-paper">
 
         <p>
-          it started at a school event.
+          i still remember that school event where we first met.
+          you offered me a seat, and somehow that small moment
+          became the start of something really special to me.
         </p>
 
         <p>
-          you offered me a seat, and somehow that small moment became
-          something i'll always remember.
+          i didn't know that a simple seat would eventually lead
+          me to meeting someone who would become such an important
+          part of my life.
         </p>
 
         <p>
-          i didn't know it at the time, but that was also when
-          i started having a little crush on you.
-        </p>
-
-        <p>
-          and now, here we are. ♡
+          and honestly, i'm really glad i sat there. ♡
         </p>
 
       </div>
-
-
-      <!-- STORY NAVIGATION -->
 
       <div class="navigation">
 
@@ -186,7 +194,7 @@
         </button>
 
         <button onclick="nextPage('memories')">
-          continue ♡
+          continue →
         </button>
 
       </div>
@@ -194,7 +202,6 @@
     </div>
 
   </section>
-
 
 
   <!-- =========================
@@ -203,74 +210,66 @@
 
   <section class="page" id="memories">
 
-    <div class="seal page-seal">🦭</div>
-    <div class="seal seal-right">🦭</div>
+    <div class="seal page-seal">
+      🦭
+    </div>
+
+    <div class="seal seal-right">
+      🦭
+    </div>
 
     <div class="scrapbook">
 
       <p class="small-text">
-        some little moments ♡
+        some little memories ♡
       </p>
 
       <h2>
-        our memories
+        memories
       </h2>
 
-
       <div class="memory-grid">
-
-
-        <!-- MEMORY 1 -->
 
         <div class="memory-card">
 
           <img
             src="images/memory1.jpg"
-            alt="memory 1"
+            alt="Memory 1"
           >
 
         </div>
 
-
-        <!-- MEMORY 2 -->
 
         <div class="memory-card">
 
           <img
             src="images/memory2.jpg"
-            alt="memory 2"
+            alt="Memory 2"
           >
 
         </div>
 
-
-        <!-- MEMORY 3 -->
 
         <div class="memory-card">
 
           <img
             src="images/memory3.jpg"
-            alt="memory 3"
+            alt="Memory 3"
           >
 
         </div>
 
-
-        <!-- MEMORY 4 -->
 
         <div class="memory-card">
 
           <img
             src="images/memory4.jpg"
-            alt="memory 4"
+            alt="Memory 4"
           >
 
         </div>
 
       </div>
-
-
-      <!-- MEMORIES NAVIGATION -->
 
       <div class="navigation">
 
@@ -279,7 +278,7 @@
         </button>
 
         <button onclick="nextPage('love')">
-          continue ♡
+          continue →
         </button>
 
       </div>
@@ -287,7 +286,6 @@
     </div>
 
   </section>
-
 
 
   <!-- =========================
@@ -296,57 +294,41 @@
 
   <section class="page" id="love">
 
-    <div class="seal page-seal">🦭</div>
+    <div class="seal page-seal">
+      🦭
+    </div>
 
     <div class="scrapbook">
 
       <p class="small-text">
-        little things about you ♡
+        things i like about you ♡
       </p>
 
       <h2>
-        things i like about you
+        little things
       </h2>
-
 
       <div class="love-list">
 
-        <p>
-          ♡ your personality
-        </p>
+        <p>♡ your personality</p>
 
-        <p>
-          ♡ your patience
-        </p>
+        <p>♡ your patience</p>
 
-        <p>
-          ♡ your creativity
-        </p>
+        <p>♡ your creativity</p>
 
-        <p>
-          ♡ your smile
-        </p>
+        <p>♡ your smile</p>
 
-        <p>
-          ♡ your beauty
-        </p>
+        <p>♡ your beauty</p>
 
-        <p>
-          ♡ the little things you do
-        </p>
+        <p>♡ the way you make ordinary moments fun</p>
 
-        <p>
-          ♡ the way you make ordinary moments special
-        </p>
-
-        <p>
-          ♡ simply being you
-        </p>
+        <p>♡ all the little things that make you, you</p>
 
       </div>
 
-
-      <!-- LOVE NAVIGATION -->
+      <p>
+        i could honestly keep going, but we'd be here forever HAHAHA.
+      </p>
 
       <div class="navigation">
 
@@ -355,7 +337,7 @@
         </button>
 
         <button onclick="nextPage('letter')">
-          continue ♡
+          continue →
         </button>
 
       </div>
@@ -365,26 +347,29 @@
   </section>
 
 
-
   <!-- =========================
        LETTER FROM ME
   ========================== -->
 
   <section class="page" id="letter">
 
-    <div class="seal page-seal">🦭</div>
-    <div class="seal seal-right">🦭</div>
+    <div class="seal page-seal">
+      🦭
+    </div>
+
+    <div class="seal seal-right">
+      🦭
+    </div>
 
     <div class="scrapbook">
 
       <p class="small-text">
-        a little message for you ♡
+        something i wanted to tell you ♡
       </p>
 
       <h2>
-        from me
+        a letter for you
       </h2>
-
 
       <div class="letter-paper">
 
@@ -397,32 +382,34 @@
         </p>
 
         <p>
-          i don't really know how to put everything i feel into words,
-          but i just want you to know how thankful i am for you.
-          after everything we've been through, all the good moments,
-          random laughs, small fights, and everything in between,
-          i'm still grateful that i got to meet you and have you in my life.
+          i don't really know how to put everything i feel into
+          words, but i just want you to know how thankful i am
+          for you. after everything we've been through, all the
+          good moments, random laughs, small fights, and everything
+          in between, i'm still grateful that i got to meet you
+          and have you in my life.
         </p>
 
         <p>
           i love all the little things about you. your smile,
-          your personality, your creativity, your patience,
-          and even the random things you do that somehow make me smile.
-          i don't always say it properly, but i notice and appreciate
-          more than you probably know.
+          your personality, your creativity, your patience, and
+          even the random things you do that somehow make me smile.
+          i don't always say it properly, but i notice and
+          appreciate more than you probably know.
         </p>
 
         <p>
-          i know i'm not perfect, and i know there are things
-          i still need to learn and improve. but i'm thankful
-          for all the moments we've shared and for everything
-          you've taught me along the way.
+          i know i'm not perfect, and i know there are things i
+          still need to learn and improve. but i'm thankful for
+          all the moments we've shared and for everything you've
+          taught me along the way.
         </p>
 
         <p>
-          today is your day, so i hope you enjoy every little part of it.
-          i hope this new year of your life brings you more happiness,
-          good memories, and things that make you proud of yourself.
+          today is your day, so i hope you enjoy every little part
+          of it. i hope this new year of your life brings you more
+          happiness, good memories, and things that make you proud
+          of yourself.
         </p>
 
         <p>
@@ -439,9 +426,6 @@
 
       </div>
 
-
-      <!-- LETTER NAVIGATION -->
-
       <div class="navigation">
 
         <button onclick="nextPage('love')">
@@ -449,7 +433,7 @@
         </button>
 
         <button onclick="nextPage('messages')">
-          continue ♡
+          continue →
         </button>
 
       </div>
@@ -459,28 +443,27 @@
   </section>
 
 
-
   <!-- =========================
        MESSAGES
   ========================== -->
 
   <section class="page" id="messages">
 
-    <div class="seal page-seal">🦭</div>
-    <div class="seal seal-right">🦭</div>
+    <div class="seal page-seal">
+      🦭
+    </div>
 
     <div class="scrapbook">
 
       <p class="small-text">
-        messages from people who love you ♡
+        you're loved by many ♡
       </p>
 
       <h2>
-        little letters
+        little messages
       </h2>
 
-
-      <!-- MAIN MESSAGE CHOICES -->
+      <!-- MAIN CHOICES -->
 
       <div class="message-choice" id="messageChoice">
 
@@ -489,15 +472,14 @@
         </button>
 
         <button onclick="showMessageGroup('family')">
-          🏠 messages from family
+          🏠 family
         </button>
 
         <button onclick="showMessageGroup('friends')">
-          🫶 messages from friends
+          🫶 friends
         </button>
 
       </div>
-
 
 
       <!-- =========================
@@ -507,13 +489,8 @@
       <div class="message-group" id="familyGroup">
 
         <h3>
-          family ♡
+          choose a message ♡
         </h3>
-
-        <p class="small-text">
-          choose a message
-        </p>
-
 
         <div class="person-buttons">
 
@@ -542,7 +519,6 @@
       </div>
 
 
-
       <!-- =========================
            FRIENDS
       ========================== -->
@@ -550,13 +526,8 @@
       <div class="message-group" id="friendsGroup">
 
         <h3>
-          friends ♡
+          choose a message ♡
         </h3>
-
-        <p class="small-text">
-          choose a message
-        </p>
-
 
         <div class="person-buttons">
 
@@ -573,22 +544,19 @@
       </div>
 
 
-
       <!-- =========================
-           INDIVIDUAL MESSAGE
+           INDIVIDUAL LETTER
       ========================== -->
 
       <div class="individual-letter" id="individualLetter">
 
         <h3 id="letterName"></h3>
 
-
         <div class="letter-paper">
 
-          <p id="letterContent"></p>
+          <div id="letterContent"></div>
 
         </div>
-
 
         <button onclick="backToMessages()">
           ← choose another message
@@ -597,8 +565,7 @@
       </div>
 
 
-
-      <!-- MESSAGE PAGE NAVIGATION -->
+      <!-- NAVIGATION -->
 
       <div class="navigation">
 
@@ -607,7 +574,7 @@
         </button>
 
         <button onclick="nextPage('final')">
-          continue ♡
+          continue →
         </button>
 
       </div>
@@ -617,15 +584,19 @@
   </section>
 
 
-
   <!-- =========================
        FINAL
   ========================== -->
 
   <section class="page" id="final">
 
-    <div class="seal seal-final-left">🦭</div>
-    <div class="seal seal-final-right">🦭</div>
+    <div class="seal seal-final-left">
+      🦭
+    </div>
+
+    <div class="seal seal-final-right">
+      🦭
+    </div>
 
     <div class="scrapbook">
 
@@ -633,38 +604,32 @@
         🌷 🩷 🌷 💙 🌷
       </div>
 
-      <p class="small-text">
-        and finally...
-      </p>
-
       <h2>
         happy birthday, iyang ♡
       </h2>
 
       <p>
-        i hope you had a beautiful day and that this little website
-        made you smile, even just a little.
+        i hope this little website made you smile,
+        even just a little.
       </p>
 
       <p>
-        here's to more laughs, more memories, more random moments,
-        and more birthdays to celebrate.
+        thank you for being such a special person in my life
+        and for all the memories we've made together.
       </p>
 
       <p>
-        you deserve so many good things in life.
+        here's to more laughs, more memories,
+        more random moments, and more birthdays. ♡
       </p>
 
       <p class="final-love">
-        happy 17th birthday, my iyang 🦭♡
+        i love you always 🦭♡
       </p>
 
       <div class="tulips">
-        🌷 🌷 🌷
+        🌷 🎀 🌷
       </div>
-
-
-      <!-- FINAL BACK BUTTON -->
 
       <div class="navigation">
 
@@ -679,12 +644,12 @@
   </section>
 
 
-
-  <!-- JAVASCRIPT -->
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
 
   <script src="script.js"></script>
 
 </body>
 
 </html>
-```
