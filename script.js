@@ -1,8 +1,17 @@
-```javascript
+/* =================================
+   IYANG'S BIRTHDAY WEBSITE
+================================= */
+
+
+/* =================================
+   PAGE NAVIGATION
+================================= */
+
 function nextPage(pageId) {
+
   const pages = document.querySelectorAll(".page");
 
-  pages.forEach(page => {
+  pages.forEach(function(page) {
     page.classList.remove("active");
   });
 
@@ -10,68 +19,68 @@ function nextPage(pageId) {
 
   if (next) {
     next.classList.add("active");
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 }
 
 
-/* =========================
+/* =================================
    GIFT OPENING
-========================= */
+================================= */
 
-const giftButton = document.getElementById("giftButton");
-const giftBox = document.getElementById("giftBox");
-const giftMessage = document.getElementById("giftMessage");
+function openGift() {
 
-if (giftButton) {
-  giftButton.addEventListener("click", function () {
+  const cover = document.getElementById("cover");
+  const giftReveal = document.getElementById("giftReveal");
+  const giftBox = document.getElementById("giftBox");
+  const giftMessage = document.getElementById("giftMessage");
 
-    nextPage("giftReveal");
+  if (!cover || !giftReveal || !giftBox || !giftMessage) {
+    return;
+  }
 
-    setTimeout(() => {
+  /* Change page */
 
-      giftBox.classList.add("open");
+  cover.classList.remove("active");
+  giftReveal.classList.add("active");
 
-      setTimeout(() => {
-        giftMessage.classList.add("show");
-      }, 800);
-
-    }, 500);
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
   });
+
+
+  /* Reset animation */
+
+  giftBox.classList.remove("open");
+  giftMessage.classList.remove("show");
+
+
+  /* Open the gift */
+
+  setTimeout(function() {
+
+    giftBox.classList.add("open");
+
+  }, 500);
+
+
+  /* Show gift message */
+
+  setTimeout(function() {
+
+    giftMessage.classList.add("show");
+
+  }, 1300);
 }
 
 
-/* =========================
-   MESSAGE GROUPS
-========================= */
-
-function showMessageGroup(group) {
-
-  const familyGroup = document.getElementById("familyGroup");
-  const friendsGroup = document.getElementById("friendsGroup");
-  const individualLetter = document.getElementById("individualLetter");
-  const messageChoice = document.getElementById("messageChoice");
-
-  individualLetter.classList.remove("show");
-
-  messageChoice.style.display = "flex";
-
-  familyGroup.classList.remove("show");
-  friendsGroup.classList.remove("show");
-
-  if (group === "family") {
-    familyGroup.classList.add("show");
-  }
-
-  if (group === "friends") {
-    friendsGroup.classList.add("show");
-  }
-}
-
-
-/* =========================
-   NAMES
-========================= */
+/* =================================
+   MESSAGE DATA
+================================= */
 
 const names = {
 
@@ -79,7 +88,9 @@ const names = {
 
   ate: "ate",
 
-  soul: "soul",
+  soul: "soull",
+
+  siena: "siena",
 
   eros: "eros",
 
@@ -89,14 +100,14 @@ const names = {
 
   giff: "giff",
 
+  chloe: "chloe",
+
+  aisha: "aisha",
+
   lyle: "lyle"
 
 };
 
-
-/* =========================
-   MESSAGES
-========================= */
 
 const messages = {
 
@@ -143,6 +154,17 @@ And most especially, you taught us how forgiveness can change one's heart.
 With this celebration that expresses your gratefulness, we all may remind you that you are loved forever by those you know and may not know.
 
 This world loves your smile and your heart, and we hope you have a blessed day.`,
+
+
+  siena: `happy birthday, iyang! ♡
+
+i hope you have a really good birthday and that you get to enjoy your day with the people who care about you.
+
+i hope this year brings you more happy moments, new memories, and lots of reasons to smile.
+
+always take care of yourself and remember that there are people who love and appreciate you.
+
+enjoy your day, iyang! 🌷`,
 
 
   eros: `Happiest 17th Birthday cousin my love!
@@ -195,11 +217,31 @@ No matter where life takes us (knowing na nasa mnl ka na rn) I’ll always be ri
 
 I’ve always thank God that I have this type of friendship that makes life worth it.
 
-Happiest Birthday, Dianna! 🥂
+Happiest Birthday, Dianna!
 
 enjoy your day and i love you as always. 🌷🩷
 
 lovelots, gip:)`,
+
+
+  chloe: `happy birthday, iyang! ♡
+
+i hope you have an amazing birthday and get to spend it with the people who make you happy.
+
+thank you for all the memories and random moments we've shared. i hope we get to make more memories together soon.
+
+enjoy your special day and don't forget to smile a lot! 🌷`,
+
+
+  aisha: `happy birthday, iyang! 🩷
+
+i hope your birthday is filled with good food, good people, and lots of happy moments.
+
+you deserve a really nice day, so enjoy every second of it!
+
+i'm wishing you more happiness, good memories, and success this year.
+
+happy birthdayyy! 🎀`,
 
 
   lyle: `happii 17th, yangg !!
@@ -219,130 +261,64 @@ i miss you lots and i’m really happy you’re one of the people I get to call 
 };
 
 
-/* =========================
-   OPEN INDIVIDUAL MESSAGE
-========================= */
+/* =================================
+   MESSAGE ELEMENTS
+================================= */
 
-function openLetter(person) {
+const messageChoice =
+  document.getElementById("messageChoice");
 
-  const messageChoice =
-    document.getElementById("messageChoice");
+const familyGroup =
+  document.getElementById("familyGroup");
 
-  const familyGroup =
-    document.getElementById("familyGroup");
+const friendsGroup =
+  document.getElementById("friendsGroup");
 
-  const friendsGroup =
-    document.getElementById("friendsGroup");
+const individualLetter =
+  document.getElementById("individualLetter");
 
-  const individualLetter =
-    document.getElementById("individualLetter");
+const letterName =
+  document.getElementById("letterName");
 
-  const letterName =
-    document.getElementById("letterName");
+const letterContent =
+  document.getElementById("letterContent");
 
-  const letterContent =
-    document.getElementById("letterContent");
-
-
-  /* Hide the choices */
-
-  messageChoice.style.display = "none";
-
-  familyGroup.classList.remove("show");
-
-  friendsGroup.classList.remove("show");
+const finishButton =
+  document.getElementById("finishButton");
 
 
-  /* Show person's name */
+/* =================================
+   SHOW MESSAGE GROUP
+================================= */
 
-  letterName.textContent =
-    names[person] || "";
+function showMessageGroup(group) {
 
-
-  /* =========================
-     MARGAUX = IMAGE
-  ========================= */
-
-  if (person === "margaux") {
-
-    letterContent.innerHTML = `
-      <img
-        src="images/margaux.jpg"
-        alt="Margaux's birthday drawing"
-        style="
-          width: 100%;
-          max-width: 450px;
-          display: block;
-          margin: 0 auto;
-          border: 2px solid #ead9df;
-          box-shadow: 5px 5px 0 #d8b9c7;
-        "
-      >
-    `;
-
+  if (!messageChoice ||
+      !familyGroup ||
+      !friendsGroup ||
+      !individualLetter) {
+    return;
   }
-
-
-  /* =========================
-     EVERYONE ELSE = MESSAGE
-  ========================= */
-
-  else {
-
-    letterContent.textContent =
-      messages[person] || "";
-
-  }
-
-
-  /* Show the letter */
-
-  individualLetter.classList.add("show");
-
-
-  /* Scroll to the message */
-
-  setTimeout(() => {
-
-    individualLetter.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-
-  }, 100);
-
-}
-
-
-/* =========================
-   BACK TO MESSAGE CHOICES
-========================= */
-
-function backToMessages() {
-
-  const messageChoice =
-    document.getElementById("messageChoice");
-
-  const familyGroup =
-    document.getElementById("familyGroup");
-
-  const friendsGroup =
-    document.getElementById("friendsGroup");
-
-  const individualLetter =
-    document.getElementById("individualLetter");
-
 
   individualLetter.classList.remove("show");
 
   familyGroup.classList.remove("show");
-
   friendsGroup.classList.remove("show");
 
   messageChoice.style.display = "flex";
 
 
-  setTimeout(() => {
+  if (group === "family") {
+    familyGroup.classList.add("show");
+  }
+
+
+  if (group === "friends") {
+    friendsGroup.classList.add("show");
+  }
+
+
+  setTimeout(function() {
 
     messageChoice.scrollIntoView({
       behavior: "smooth",
@@ -350,6 +326,277 @@ function backToMessages() {
     });
 
   }, 100);
+}
+
+
+/* =================================
+   OPEN INDIVIDUAL MESSAGE
+================================= */
+
+function openLetter(person) {
+
+  if (!messageChoice ||
+      !familyGroup ||
+      !friendsGroup ||
+      !individualLetter ||
+      !letterName ||
+      !letterContent) {
+    return;
+  }
+
+
+  /* Hide choices */
+
+  messageChoice.style.display = "none";
+
+  familyGroup.classList.remove("show");
+  friendsGroup.classList.remove("show");
+
+
+  /* Set name */
+
+  letterName.textContent =
+    names[person] || "";
+
+
+  /* Clear old content */
+
+  letterContent.innerHTML = "";
+
+
+  /* Margaux uses an image */
+
+  if (person === "margaux") {
+
+    const image = document.createElement("img");
+
+    image.src = "images/margaux.jpg";
+    image.alt = "Margaux's birthday drawing";
+
+    image.className = "margaux-image";
+
+    letterContent.appendChild(image);
+
+  }
+
+
+  /* Everyone else gets their message */
+
+  else {
+
+    letterContent.textContent =
+      messages[person] || "message coming soon ♡";
+
+  }
+
+
+  /* Show letter */
+
+  individualLetter.classList.add("show");
+
+
+  /* Scroll to letter */
+
+  setTimeout(function() {
+
+    individualLetter.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  }, 100);
+}
+
+
+/* =================================
+   BACK TO MESSAGE CHOICES
+================================= */
+
+function backToMessages() {
+
+  if (!messageChoice ||
+      !familyGroup ||
+      !friendsGroup ||
+      !individualLetter) {
+    return;
+  }
+
+
+  individualLetter.classList.remove("show");
+
+  familyGroup.classList.remove("show");
+  friendsGroup.classList.remove("show");
+
+  messageChoice.style.display = "flex";
+
+
+  setTimeout(function() {
+
+    messageChoice.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+
+  }, 100);
+}
+
+
+/* =================================
+   EVENT LISTENERS
+================================= */
+
+
+/* Gift button */
+
+const giftButton =
+  document.getElementById("giftButton");
+
+if (giftButton) {
+
+  giftButton.addEventListener("click", function() {
+    openGift();
+  });
 
 }
-```
+
+
+/* All navigation buttons */
+
+const navigationButtons =
+  document.querySelectorAll("[data-next]");
+
+navigationButtons.forEach(function(button) {
+
+  button.addEventListener("click", function() {
+
+    const pageId =
+      button.getAttribute("data-next");
+
+    if (pageId) {
+      nextPage(pageId);
+    }
+
+  });
+
+});
+
+
+/* Message group buttons */
+
+const groupButtons =
+  document.querySelectorAll("[data-group]");
+
+groupButtons.forEach(function(button) {
+
+  button.addEventListener("click", function() {
+
+    const group =
+      button.getAttribute("data-group");
+
+    showMessageGroup(group);
+
+  });
+
+});
+
+
+/* Individual person buttons */
+
+const personButtons =
+  document.querySelectorAll("[data-person]");
+
+personButtons.forEach(function(button) {
+
+  button.addEventListener("click", function() {
+
+    const person =
+      button.getAttribute("data-person");
+
+    openLetter(person);
+
+  });
+
+});
+
+
+/* Back button */
+
+const backMessages =
+  document.getElementById("backMessages");
+
+if (backMessages) {
+
+  backMessages.addEventListener(
+    "click",
+    function() {
+      backToMessages();
+    }
+  );
+
+}
+
+
+/* =================================
+   FINISH BUTTON
+================================= */
+
+if (finishButton) {
+
+  finishButton.addEventListener("click", function() {
+
+    nextPage("final");
+
+  });
+
+}
+
+
+/* =================================
+   START AGAIN
+================================= */
+
+const startAgain =
+  document.querySelector('[data-next="cover"]');
+
+if (startAgain) {
+
+  startAgain.addEventListener("click", function() {
+
+    /* Reset gift animation */
+
+    const giftBox =
+      document.getElementById("giftBox");
+
+    const giftMessage =
+      document.getElementById("giftMessage");
+
+    if (giftBox) {
+      giftBox.classList.remove("open");
+    }
+
+    if (giftMessage) {
+      giftMessage.classList.remove("show");
+    }
+
+
+    /* Reset messages */
+
+    if (individualLetter) {
+      individualLetter.classList.remove("show");
+    }
+
+    if (familyGroup) {
+      familyGroup.classList.remove("show");
+    }
+
+    if (friendsGroup) {
+      friendsGroup.classList.remove("show");
+    }
+
+    if (messageChoice) {
+      messageChoice.style.display = "flex";
+    }
+
+  });
+
+}
