@@ -1,7 +1,5 @@
-// ==================== PAGE NAVIGATION ====================
-
+```javascript
 function nextPage(pageId) {
-
   const pages = document.querySelectorAll(".page");
 
   pages.forEach(page => {
@@ -17,14 +15,15 @@ function nextPage(pageId) {
 }
 
 
-// ==================== GIFT OPENING ====================
+/* =========================
+   GIFT OPENING
+========================= */
 
 const giftButton = document.getElementById("giftButton");
 const giftBox = document.getElementById("giftBox");
 const giftMessage = document.getElementById("giftMessage");
 
 if (giftButton) {
-
   giftButton.addEventListener("click", function () {
 
     nextPage("giftReveal");
@@ -38,13 +37,13 @@ if (giftButton) {
       }, 800);
 
     }, 500);
-
   });
-
 }
 
 
-// ==================== MESSAGE GROUPS ====================
+/* =========================
+   MESSAGE GROUPS
+========================= */
 
 function showMessageGroup(group) {
 
@@ -67,11 +66,12 @@ function showMessageGroup(group) {
   if (group === "friends") {
     friendsGroup.classList.add("show");
   }
-
 }
 
 
-// ==================== NAMES ====================
+/* =========================
+   NAMES
+========================= */
 
 const names = {
 
@@ -94,7 +94,9 @@ const names = {
 };
 
 
-// ==================== MESSAGES ====================
+/* =========================
+   MESSAGES
+========================= */
 
 const messages = {
 
@@ -160,24 +162,11 @@ Yun lang naman hindi ko na papahabain, love you so much cousin my love miss na m
 Happy Birthdih 🥰😘😍🫶🎉😝🎊🥳`,
 
 
-  margaux: `happy birthday, iyang! ♡
+  titaMeng: `happy birthday yanna.
 
-i hope you have a really nice birthday and enjoy your special day.
+stay inlove with chasmiru 😂
 
-wishing you more happiness, good memories, and blessings in this new chapter of your life.
-
-always take care of yourself and remember that you are loved.
-
-enjoy your day! ♡`,
-
-
-  titaMeng: `happy 17th birthday, iyang! ♡
-
-wishing you a happy and meaningful birthday.
-
-may you continue to grow into the person you want to become and may you always be surrounded by people who care about you.
-
-enjoy your special day and always take care! ♡`,
+love tita meng and margaux`,
 
 
   giff: `To my Numbawan Bestfriend!
@@ -230,28 +219,88 @@ i miss you lots and i’m really happy you’re one of the people I get to call 
 };
 
 
-// ==================== OPEN LETTER ====================
+/* =========================
+   OPEN INDIVIDUAL MESSAGE
+========================= */
 
 function openLetter(person) {
 
-  const messageChoice = document.getElementById("messageChoice");
-  const familyGroup = document.getElementById("familyGroup");
-  const friendsGroup = document.getElementById("friendsGroup");
-  const individualLetter = document.getElementById("individualLetter");
+  const messageChoice =
+    document.getElementById("messageChoice");
 
-  const letterName = document.getElementById("letterName");
-  const letterContent = document.getElementById("letterContent");
+  const familyGroup =
+    document.getElementById("familyGroup");
+
+  const friendsGroup =
+    document.getElementById("friendsGroup");
+
+  const individualLetter =
+    document.getElementById("individualLetter");
+
+  const letterName =
+    document.getElementById("letterName");
+
+  const letterContent =
+    document.getElementById("letterContent");
+
+
+  /* Hide the choices */
 
   messageChoice.style.display = "none";
 
   familyGroup.classList.remove("show");
+
   friendsGroup.classList.remove("show");
 
-  letterName.textContent = names[person] || "a message for you ♡";
 
-  letterContent.textContent = messages[person] || "message coming soon ♡";
+  /* Show person's name */
+
+  letterName.textContent =
+    names[person] || "";
+
+
+  /* =========================
+     MARGAUX = IMAGE
+  ========================= */
+
+  if (person === "margaux") {
+
+    letterContent.innerHTML = `
+      <img
+        src="images/margaux.jpg"
+        alt="Margaux's birthday drawing"
+        style="
+          width: 100%;
+          max-width: 450px;
+          display: block;
+          margin: 0 auto;
+          border: 2px solid #ead9df;
+          box-shadow: 5px 5px 0 #d8b9c7;
+        "
+      >
+    `;
+
+  }
+
+
+  /* =========================
+     EVERYONE ELSE = MESSAGE
+  ========================= */
+
+  else {
+
+    letterContent.textContent =
+      messages[person] || "";
+
+  }
+
+
+  /* Show the letter */
 
   individualLetter.classList.add("show");
+
+
+  /* Scroll to the message */
 
   setTimeout(() => {
 
@@ -265,21 +314,33 @@ function openLetter(person) {
 }
 
 
-// ==================== BACK TO MESSAGES ====================
+/* =========================
+   BACK TO MESSAGE CHOICES
+========================= */
 
 function backToMessages() {
 
-  const messageChoice = document.getElementById("messageChoice");
-  const familyGroup = document.getElementById("familyGroup");
-  const friendsGroup = document.getElementById("friendsGroup");
-  const individualLetter = document.getElementById("individualLetter");
+  const messageChoice =
+    document.getElementById("messageChoice");
+
+  const familyGroup =
+    document.getElementById("familyGroup");
+
+  const friendsGroup =
+    document.getElementById("friendsGroup");
+
+  const individualLetter =
+    document.getElementById("individualLetter");
+
 
   individualLetter.classList.remove("show");
 
   familyGroup.classList.remove("show");
+
   friendsGroup.classList.remove("show");
 
   messageChoice.style.display = "flex";
+
 
   setTimeout(() => {
 
@@ -291,3 +352,4 @@ function backToMessages() {
   }, 100);
 
 }
+```
