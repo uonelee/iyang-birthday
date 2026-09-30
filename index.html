@@ -1,84 +1,191 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Happy Birthday My Iyang ♡</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ==================== COVER ==================== -->
+
+  <!-- =========================
+       COVER
+  ========================== -->
+
   <section class="page active" id="cover">
 
     <div class="sticker sticker1">🎀</div>
-    <div class="sticker sticker2">🌷</div>
-    <div class="sticker sticker3">💗</div>
-    <div class="sticker sticker4">🩵</div>
+    <div class="sticker sticker2">💙</div>
+    <div class="sticker sticker3">🌷</div>
+    <div class="sticker sticker4">🩷</div>
 
     <div class="seal seal1">🦭</div>
     <div class="seal seal2">🦭</div>
 
     <div class="scrapbook">
 
-      <p class="small-text">a little something made just for you ♡</p>
-
       <div class="seal-title">🦭</div>
 
-      <h1>happy birthday<br>my iyang ♡</h1>
-
-      <p class="date">october 1, 2026</p>
-
-      <p>
+      <p class="small-text">
         i made this little thing for you ♡
       </p>
 
-      <button id="giftButton">🎁 open your gift</button>
+      <h1>
+        Happy Birthday<br>
+        My Iyang ♡
+      </h1>
+
+      <p class="date">
+        october 1, 2026
+      </p>
+
+      <button id="giftButton">
+        🎁 open your gift
+      </button>
 
     </div>
 
   </section>
 
 
-  <!-- ==================== GIFT REVEAL ==================== -->
+
+  <!-- =========================
+       GIFT REVEAL
+  ========================== -->
+
   <section class="page gift-reveal" id="giftReveal">
 
     <div class="seal page-seal">🦭</div>
     <div class="seal seal-right">🦭</div>
 
-    <div class="gift-scene">
+    <div class="scrapbook">
 
       <p class="small-text gift-opening-text">
-        wait... there's something for you ♡
+        wait... there's something inside ♡
       </p>
 
-      <div class="gift-box" id="giftBox">
+      <h2>🎁</h2>
 
-        <div class="gift-lid">
-          <div class="ribbon-horizontal"></div>
-          <div class="gift-bow">🎀</div>
+      <div class="gift-scene">
+
+        <div class="gift-box" id="giftBox">
+
+          <div class="gift-body">
+
+            <div class="ribbon-vertical"></div>
+
+          </div>
+
+          <div class="gift-lid">
+
+            <div class="ribbon-horizontal"></div>
+
+            <div class="gift-bow">
+              🎀
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="gift-body">
-          <div class="ribbon-vertical"></div>
+
+        <div class="gift-message" id="giftMessage">
+
+          <div class="gift-photo">
+
+            <img
+              src="images/gift.jpg"
+              alt="Iyang's birthday gift"
+            >
+
+          </div>
+
+          <p>
+            a little something for you ♡
+          </p>
+
+
+          <!-- GIFT NAVIGATION -->
+
+          <div class="navigation">
+
+            <button onclick="nextPage('cover')">
+              ← back
+            </button>
+
+            <button onclick="nextPage('story')">
+              continue ♡
+            </button>
+
+          </div>
+
         </div>
 
       </div>
 
-      <div class="gift-message" id="giftMessage">
+    </div>
 
-        <div class="gift-photo">
-          <img src="images/gift.jpg" alt="Iyang's birthday gift">
-        </div>
+  </section>
 
-        <h2>a little something for you ♡</h2>
+
+
+  <!-- =========================
+       STORY
+  ========================== -->
+
+  <section class="page" id="story">
+
+    <div class="seal page-seal">🦭</div>
+
+    <div class="scrapbook">
+
+      <p class="small-text">
+        how it all started ♡
+      </p>
+
+      <h2>
+        our little story
+      </h2>
+
+
+      <div class="letter-paper">
 
         <p>
-          i hope you like this little surprise, my iyang 🦭
+          it started at a school event.
         </p>
 
-        <button onclick="nextPage('story')">
+        <p>
+          you offered me a seat, and somehow that small moment became
+          something i'll always remember.
+        </p>
+
+        <p>
+          i didn't know it at the time, but that was also when
+          i started having a little crush on you.
+        </p>
+
+        <p>
+          and now, here we are. ♡
+        </p>
+
+      </div>
+
+
+      <!-- STORY NAVIGATION -->
+
+      <div class="navigation">
+
+        <button onclick="nextPage('giftReveal')">
+          ← back
+        </button>
+
+        <button onclick="nextPage('memories')">
           continue ♡
         </button>
 
@@ -89,85 +196,92 @@
   </section>
 
 
-  <!-- ==================== STORY ==================== -->
-  <section class="page" id="story">
 
-    <div class="seal page-seal">🦭</div>
+  <!-- =========================
+       MEMORIES
+  ========================== -->
 
-    <div class="scrapbook">
-
-      <p class="small-text">how it started ♡</p>
-
-      <h2>our little story</h2>
-
-      <p>
-        it all started at a school event.
-      </p>
-
-      <p>
-        you offered me a seat, and somehow that small moment
-        became something i would always remember.
-      </p>
-
-      <p>
-        i didn't know it at the time, but that was also when
-        i started developing a crush on you.
-      </p>
-
-      <p>
-        and now, here we are. ♡
-      </p>
-
-      <div class="navigation">
-        <button onclick="nextPage('memories')">
-          next ♡
-        </button>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ==================== MEMORIES ==================== -->
   <section class="page" id="memories">
 
+    <div class="seal page-seal">🦭</div>
     <div class="seal seal-right">🦭</div>
 
     <div class="scrapbook">
 
-      <p class="small-text">some little moments ♡</p>
+      <p class="small-text">
+        some little moments ♡
+      </p>
 
-      <h2>memories</h2>
+      <h2>
+        our memories
+      </h2>
+
 
       <div class="memory-grid">
 
-        <div class="memory-card">
-          <img src="images/memory1.jpg" alt="memory 1">
-          <p>one of the many moments i wish i could keep forever.</p>
-        </div>
+
+        <!-- MEMORY 1 -->
 
         <div class="memory-card">
-          <img src="images/memory2.jpg" alt="memory 2">
-          <p>the little things that somehow become my favorite memories.</p>
+
+          <img
+            src="images/memory1.jpg"
+            alt="memory 1"
+          >
+
         </div>
 
-        <div class="memory-card">
-          <img src="images/memory3.jpg" alt="memory 3">
-          <p>all the random laughs and moments we shared.</p>
-        </div>
+
+        <!-- MEMORY 2 -->
 
         <div class="memory-card">
-          <img src="images/memory4.jpg" alt="memory 4">
-          <p>just another reminder of how many memories we already have.</p>
+
+          <img
+            src="images/memory2.jpg"
+            alt="memory 2"
+          >
+
+        </div>
+
+
+        <!-- MEMORY 3 -->
+
+        <div class="memory-card">
+
+          <img
+            src="images/memory3.jpg"
+            alt="memory 3"
+          >
+
+        </div>
+
+
+        <!-- MEMORY 4 -->
+
+        <div class="memory-card">
+
+          <img
+            src="images/memory4.jpg"
+            alt="memory 4"
+          >
+
         </div>
 
       </div>
 
+
+      <!-- MEMORIES NAVIGATION -->
+
       <div class="navigation">
-        <button onclick="nextPage('love')">
-          next ♡
+
+        <button onclick="nextPage('story')">
+          ← back
         </button>
+
+        <button onclick="nextPage('love')">
+          continue ♡
+        </button>
+
       </div>
 
     </div>
@@ -175,44 +289,75 @@
   </section>
 
 
-  <!-- ==================== THINGS I LIKE ==================== -->
+
+  <!-- =========================
+       THINGS I LIKE
+  ========================== -->
+
   <section class="page" id="love">
 
     <div class="seal page-seal">🦭</div>
 
     <div class="scrapbook">
 
-      <p class="small-text">things i like about you ♡</p>
+      <p class="small-text">
+        little things about you ♡
+      </p>
 
-      <h2>why you're special</h2>
+      <h2>
+        things i like about you
+      </h2>
+
 
       <div class="love-list">
 
-        <p>🌷 your personality</p>
+        <p>
+          ♡ your personality
+        </p>
 
-        <p>💗 your patience</p>
+        <p>
+          ♡ your patience
+        </p>
 
-        <p>🎨 your creativity</p>
+        <p>
+          ♡ your creativity
+        </p>
 
-        <p>😊 your smile</p>
+        <p>
+          ♡ your smile
+        </p>
 
-        <p>🦭 the random things you do</p>
+        <p>
+          ♡ your beauty
+        </p>
 
-        <p>💙 the way you care about people</p>
+        <p>
+          ♡ the little things you do
+        </p>
 
-        <p>✨ and simply... you being you</p>
+        <p>
+          ♡ the way you make ordinary moments special
+        </p>
+
+        <p>
+          ♡ simply being you
+        </p>
 
       </div>
 
-      <p>
-        there are honestly so many things i could put here,
-        but i don't think this page would be long enough. ♡
-      </p>
+
+      <!-- LOVE NAVIGATION -->
 
       <div class="navigation">
-        <button onclick="nextPage('letter')">
-          next ♡
+
+        <button onclick="nextPage('memories')">
+          ← back
         </button>
+
+        <button onclick="nextPage('letter')">
+          continue ♡
+        </button>
+
       </div>
 
     </div>
@@ -220,48 +365,93 @@
   </section>
 
 
-  <!-- ==================== LETTER ==================== -->
+
+  <!-- =========================
+       LETTER FROM ME
+  ========================== -->
+
   <section class="page" id="letter">
 
+    <div class="seal page-seal">🦭</div>
     <div class="seal seal-right">🦭</div>
 
     <div class="scrapbook">
 
-      <p class="small-text">something i wanted to tell you ♡</p>
+      <p class="small-text">
+        a little message for you ♡
+      </p>
 
-      <h2>for my iyang</h2>
+      <h2>
+        from me
+      </h2>
+
 
       <div class="letter-paper">
 
         <p>
-          i hope you know how special you are to me.
+          dear iyang,
         </p>
 
         <p>
-          thank you for all the memories, laughs, conversations,
-          and little moments we've shared.
+          happy birthday, my iyang ♡
         </p>
 
         <p>
-          no matter how simple a moment may seem,
-          somehow you always make it more memorable.
+          i don't really know how to put everything i feel into words,
+          but i just want you to know how thankful i am for you.
+          after everything we've been through, all the good moments,
+          random laughs, small fights, and everything in between,
+          i'm still grateful that i got to meet you and have you in my life.
         </p>
 
         <p>
-          i hope today reminds you of how loved and appreciated
-          you are by the people around you.
+          i love all the little things about you. your smile,
+          your personality, your creativity, your patience,
+          and even the random things you do that somehow make me smile.
+          i don't always say it properly, but i notice and appreciate
+          more than you probably know.
         </p>
 
         <p>
-          you deserve a really happy birthday. ♡
+          i know i'm not perfect, and i know there are things
+          i still need to learn and improve. but i'm thankful
+          for all the moments we've shared and for everything
+          you've taught me along the way.
+        </p>
+
+        <p>
+          today is your day, so i hope you enjoy every little part of it.
+          i hope this new year of your life brings you more happiness,
+          good memories, and things that make you proud of yourself.
+        </p>
+
+        <p>
+          thank you for being you, iyang.
+        </p>
+
+        <p>
+          happy 17th birthday. i love you always. ♡
+        </p>
+
+        <p>
+          — me 🦭
         </p>
 
       </div>
 
+
+      <!-- LETTER NAVIGATION -->
+
       <div class="navigation">
-        <button onclick="nextPage('messages')">
-          next ♡
+
+        <button onclick="nextPage('love')">
+          ← back
         </button>
+
+        <button onclick="nextPage('messages')">
+          continue ♡
+        </button>
+
       </div>
 
     </div>
@@ -269,95 +459,136 @@
   </section>
 
 
-  <!-- ==================== MESSAGES ==================== -->
+
+  <!-- =========================
+       MESSAGES
+  ========================== -->
+
   <section class="page" id="messages">
 
     <div class="seal page-seal">🦭</div>
+    <div class="seal seal-right">🦭</div>
 
     <div class="scrapbook">
 
-      <p class="small-text">messages from people who love you ♡</p>
+      <p class="small-text">
+        messages from people who love you ♡
+      </p>
 
-      <h2>little letters</h2>
+      <h2>
+        little letters
+      </h2>
+
+
+      <!-- MAIN MESSAGE CHOICES -->
 
       <div class="message-choice" id="messageChoice">
 
         <button onclick="openLetter('me')">
-          💌 From Me 🦭
+          💌 from me
         </button>
 
         <button onclick="showMessageGroup('family')">
-          💗 messages from family
+          🏠 messages from family
         </button>
 
         <button onclick="showMessageGroup('friends')">
-          🌷 messages from friends
+          🫶 messages from friends
         </button>
 
       </div>
 
 
-      <!-- FAMILY -->
+
+      <!-- =========================
+           FAMILY
+      ========================== -->
 
       <div class="message-group" id="familyGroup">
 
-        <h3>💗 from family</h3>
+        <h3>
+          family ♡
+        </h3>
 
         <p class="small-text">
-          choose whose message you want to read ♡
+          choose a message
         </p>
+
 
         <div class="person-buttons">
 
-          <button onclick="openLetter('ate')">ate</button>
+          <button onclick="openLetter('ate')">
+            ate
+          </button>
 
-          <button onclick="openLetter('soul')">soul</button>
+          <button onclick="openLetter('soul')">
+            soul
+          </button>
 
-          <button onclick="openLetter('eros')">eros</button>
+          <button onclick="openLetter('eros')">
+            eros
+          </button>
 
-          <button onclick="openLetter('margaux')">margaux</button>
+          <button onclick="openLetter('margaux')">
+            margaux
+          </button>
 
-          <button onclick="openLetter('titaMeng')">tita meng</button>
+          <button onclick="openLetter('titaMeng')">
+            tita meng
+          </button>
 
         </div>
 
       </div>
 
 
-      <!-- FRIENDS -->
+
+      <!-- =========================
+           FRIENDS
+      ========================== -->
 
       <div class="message-group" id="friendsGroup">
 
-        <h3>🌷 from friends</h3>
+        <h3>
+          friends ♡
+        </h3>
 
         <p class="small-text">
-          choose whose message you want to read ♡
+          choose a message
         </p>
+
 
         <div class="person-buttons">
 
-          <button onclick="openLetter('giff')">giff</button>
+          <button onclick="openLetter('giff')">
+            giff
+          </button>
 
-          <button onclick="openLetter('lyle')">lyle</button>
+          <button onclick="openLetter('lyle')">
+            lyle
+          </button>
 
         </div>
 
       </div>
 
 
-      <!-- INDIVIDUAL LETTER -->
+
+      <!-- =========================
+           INDIVIDUAL MESSAGE
+      ========================== -->
 
       <div class="individual-letter" id="individualLetter">
 
-        <p class="small-text">
-          a message for you ♡
-        </p>
-
         <h3 id="letterName"></h3>
 
+
         <div class="letter-paper">
+
           <p id="letterContent"></p>
+
         </div>
+
 
         <button onclick="backToMessages()">
           ← choose another message
@@ -366,7 +597,14 @@
       </div>
 
 
-      <div class="navigation" id="messageNavigation">
+
+      <!-- MESSAGE PAGE NAVIGATION -->
+
+      <div class="navigation">
+
+        <button onclick="nextPage('letter')">
+          ← back
+        </button>
 
         <button onclick="nextPage('final')">
           continue ♡
@@ -379,7 +617,11 @@
   </section>
 
 
-  <!-- ==================== FINAL ==================== -->
+
+  <!-- =========================
+       FINAL
+  ========================== -->
+
   <section class="page" id="final">
 
     <div class="seal seal-final-left">🦭</div>
@@ -387,48 +629,62 @@
 
     <div class="scrapbook">
 
-      <p class="small-text">and finally... ♡</p>
-
       <div class="tulips">
-        🌷 🩵 🌷
+        🌷 🩷 🌷 💙 🌷
       </div>
 
-      <h2>happy birthday, iyang ♡</h2>
+      <p class="small-text">
+        and finally...
+      </p>
+
+      <h2>
+        happy birthday, iyang ♡
+      </h2>
 
       <p>
-        i hope this little website made you smile,
-        even just a little.
+        i hope you had a beautiful day and that this little website
+        made you smile, even just a little.
       </p>
 
       <p>
-        thank you for being one of the most special people
-        in my life.
+        here's to more laughs, more memories, more random moments,
+        and more birthdays to celebrate.
       </p>
 
       <p>
-        i hope your 17th year brings you lots of happiness,
-        good memories, new experiences, and everything
-        you've been wishing for.
+        you deserve so many good things in life.
       </p>
-
-      <p>
-        enjoy your day, birthday girl. ♡
-      </p>
-
-      <div class="tulips">
-        🌷 💗 🦭 🩵 🌷
-      </div>
 
       <p class="final-love">
-        happy 17th birthday, my iyang ♡
+        happy 17th birthday, my iyang 🦭♡
       </p>
+
+      <div class="tulips">
+        🌷 🌷 🌷
+      </div>
+
+
+      <!-- FINAL BACK BUTTON -->
+
+      <div class="navigation">
+
+        <button onclick="nextPage('messages')">
+          ← back
+        </button>
+
+      </div>
 
     </div>
 
   </section>
 
 
+
+  <!-- JAVASCRIPT -->
+
   <script src="script.js"></script>
 
 </body>
+
 </html>
+```
