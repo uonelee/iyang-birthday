@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,45 +12,46 @@
 <body>
 
   <!-- =========================
+       FLOATING DECORATIONS
+  ========================== -->
+
+  <div class="sticker sticker-heart">♡</div>
+  <div class="sticker sticker-bow">🎀</div>
+  <div class="sticker sticker-tulip">🌷</div>
+  <div class="sticker sticker-heart2">♡</div>
+  <div class="seal">🦭</div>
+
+
+  <!-- =========================
        COVER
   ========================== -->
 
-  <section class="page active" id="cover">
-
-    <div class="sticker sticker1">🌷</div>
-    <div class="sticker sticker2">🎀</div>
-    <div class="sticker sticker3">🩷</div>
-    <div class="sticker sticker4">💙</div>
-
-    <div class="seal seal1">🦭</div>
-    <div class="seal seal2">🦭</div>
+  <section id="cover" class="page active">
 
     <div class="scrapbook">
 
-      <p class="small-text">
-        a little something i made for you
-      </p>
-
-      <div class="seal-title">
-        🦭
+      <div class="small-text">
+        a little something made just for you
       </div>
 
       <h1>
-        happy birthday<br>
-        my iyang ♡
+        Happy Birthday
+        <span>My Iyang ♡</span>
       </h1>
 
-      <p class="date">
-        october 1, 2026
-      </p>
-
-      <p>
+      <p class="cover-text">
         i made this little thing for you ♡
       </p>
 
-      <!-- FIXED GIFT BUTTON -->
+      <p class="birthday-date">
+        october 1, 2026
+      </p>
 
-      <button id="giftButton" onclick="openGift()">
+      <button
+        id="giftButton"
+        class="main-button"
+        type="button"
+      >
         🎁 open your gift
       </button>
 
@@ -64,81 +64,56 @@
        GIFT REVEAL
   ========================== -->
 
-  <section class="page gift-reveal" id="giftReveal">
+  <section id="giftReveal" class="page">
 
-    <div class="seal page-seal">
-      🦭
-    </div>
+    <div class="scrapbook gift-page">
 
-    <div class="seal seal-right">
-      🦭
-    </div>
+      <p class="small-text">
+        before we continue...
+      </p>
 
-    <div class="scrapbook">
+      <h2>
+        there's a little gift for you ♡
+      </h2>
 
-      <div class="gift-scene">
+      <div id="giftBox" class="gift-box">
 
-        <p class="small-text gift-opening-text">
-          okay... here's your first surprise ♡
+        <div class="gift-lid">
+          <div class="ribbon ribbon-vertical"></div>
+          <div class="ribbon ribbon-horizontal"></div>
+        </div>
+
+        <div class="gift-body">
+          <div class="ribbon ribbon-vertical"></div>
+        </div>
+
+      </div>
+
+      <div id="giftMessage" class="gift-message">
+
+        <p>
+          a little something for you ♡
         </p>
 
-        <!-- GIFT BOX -->
-
-        <div class="gift-box" id="giftBox">
-
-          <div class="gift-lid">
-
-            <div class="gift-bow">
-              🎀
-            </div>
-
-            <div class="ribbon-horizontal"></div>
-
-          </div>
-
-          <div class="gift-body">
-
-            <div class="ribbon-vertical"></div>
-
-          </div>
-
+        <div class="gift-photo-wrapper">
+          <img
+            src="images/gift.jpg"
+            alt="Iyang's birthday gift"
+            class="gift-photo"
+          >
         </div>
 
+        <p class="gift-caption">
+          i hope you like it 🦭♡
+        </p>
 
-        <!-- GIFT REVEAL MESSAGE -->
-
-        <div class="gift-message" id="giftMessage">
-
-          <div class="gift-photo">
-
-            <img
-              src="images/gift.jpg"
-              alt="Your birthday gift"
-            >
-
-          </div>
-
-          <h2>
-            a little something for you ♡
-          </h2>
-
-          <p>
-            i hope you like it hehe 🦭
-          </p>
-
-          <div class="navigation">
-
-            <button onclick="nextPage('cover')">
-              ← back
-            </button>
-
-            <button onclick="nextPage('story')">
-              continue →
-            </button>
-
-          </div>
-
-        </div>
+        <button
+          class="main-button"
+          type="button"
+          data-next="story"
+        >
+          continue ♡
+        </button>
 
       </div>
 
@@ -151,53 +126,53 @@
        STORY
   ========================== -->
 
-  <section class="page" id="story">
-
-    <div class="seal page-seal">
-      🦭
-    </div>
+  <section id="story" class="page">
 
     <div class="scrapbook">
 
       <p class="small-text">
-        how it started ♡
+        how it started
       </p>
 
       <h2>
-        our little story
+        the beginning ♡
       </h2>
 
-      <div class="letter-paper">
+      <div class="story-card">
+
+        <div class="story-icon">
+          🌷
+        </div>
 
         <p>
-          i still remember that school event where we first met.
-          you offered me a seat, and somehow that small moment
-          became the start of something really special to me.
+          we first met at a school event.
+          you offered me a seat, and somehow
+          that small moment became the start
+          of everything.
         </p>
 
         <p>
-          i didn't know that a simple seat would eventually lead
-          me to meeting someone who would become such an important
-          part of my life.
+          i didn't know that sitting beside you
+          that day would eventually lead to so
+          many memories, random laughs, little
+          arguments, and moments that i would
+          always remember.
         </p>
 
         <p>
-          and honestly, i'm really glad i sat there. ♡
+          and honestly, that's one of the things
+          i'm most thankful for.
         </p>
 
       </div>
 
-      <div class="navigation">
-
-        <button onclick="nextPage('giftReveal')">
-          ← back
-        </button>
-
-        <button onclick="nextPage('memories')">
-          continue →
-        </button>
-
-      </div>
+      <button
+        class="main-button"
+        type="button"
+        data-next="memories"
+      >
+        next ♡
+      </button>
 
     </div>
 
@@ -208,80 +183,61 @@
        MEMORIES
   ========================== -->
 
-  <section class="page" id="memories">
-
-    <div class="seal page-seal">
-      🦭
-    </div>
-
-    <div class="seal seal-right">
-      🦭
-    </div>
+  <section id="memories" class="page">
 
     <div class="scrapbook">
 
       <p class="small-text">
-        some little memories ♡
+        little moments
       </p>
 
       <h2>
-        memories
+        our memories ♡
       </h2>
 
       <div class="memory-grid">
 
         <div class="memory-card">
-
           <img
             src="images/memory1.jpg"
             alt="Memory 1"
           >
-
         </div>
 
-
         <div class="memory-card">
-
           <img
             src="images/memory2.jpg"
             alt="Memory 2"
           >
-
         </div>
 
-
         <div class="memory-card">
-
           <img
             src="images/memory3.jpg"
             alt="Memory 3"
           >
-
         </div>
 
-
         <div class="memory-card">
-
           <img
             src="images/memory4.jpg"
             alt="Memory 4"
           >
-
         </div>
 
       </div>
 
-      <div class="navigation">
+      <p class="memory-note">
+        just a few of the moments i'm thankful for ♡
+      </p>
 
-        <button onclick="nextPage('story')">
-          ← back
-        </button>
-
-        <button onclick="nextPage('love')">
-          continue →
-        </button>
-
-      </div>
+      <button
+        class="main-button"
+        type="button"
+        data-next="things"
+      >
+        next ♡
+      </button>
 
     </div>
 
@@ -292,55 +248,69 @@
        THINGS I LIKE
   ========================== -->
 
-  <section class="page" id="love">
-
-    <div class="seal page-seal">
-      🦭
-    </div>
+  <section id="things" class="page">
 
     <div class="scrapbook">
 
       <p class="small-text">
-        things i like about you ♡
+        little things
       </p>
 
       <h2>
-        little things
+        things i like about you ♡
       </h2>
 
-      <div class="love-list">
+      <div class="things-list">
 
-        <p>♡ your personality</p>
+        <div class="thing">
+          <span>♡</span>
+          <p>your personality</p>
+        </div>
 
-        <p>♡ your patience</p>
+        <div class="thing">
+          <span>♡</span>
+          <p>your patience</p>
+        </div>
 
-        <p>♡ your creativity</p>
+        <div class="thing">
+          <span>♡</span>
+          <p>your creativity</p>
+        </div>
 
-        <p>♡ your smile</p>
+        <div class="thing">
+          <span>♡</span>
+          <p>your smile</p>
+        </div>
 
-        <p>♡ your beauty</p>
+        <div class="thing">
+          <span>♡</span>
+          <p>your beauty</p>
+        </div>
 
-        <p>♡ the way you make ordinary moments fun</p>
+        <div class="thing">
+          <span>♡</span>
+          <p>the little things you do</p>
+        </div>
 
-        <p>♡ all the little things that make you, you</p>
+        <div class="thing">
+          <span>♡</span>
+          <p>how you care about the people you love</p>
+        </div>
+
+        <div class="thing">
+          <span>♡</span>
+          <p>simply being you</p>
+        </div>
 
       </div>
 
-      <p>
-        i could honestly keep going, but we'd be here forever HAHAHA.
-      </p>
-
-      <div class="navigation">
-
-        <button onclick="nextPage('memories')">
-          ← back
-        </button>
-
-        <button onclick="nextPage('letter')">
-          continue →
-        </button>
-
-      </div>
+      <button
+        class="main-button"
+        type="button"
+        data-next="letter"
+      >
+        next ♡
+      </button>
 
     </div>
 
@@ -348,27 +318,19 @@
 
 
   <!-- =========================
-       LETTER FROM ME
+       LETTER
   ========================== -->
 
-  <section class="page" id="letter">
+  <section id="letter" class="page">
 
-    <div class="seal page-seal">
-      🦭
-    </div>
-
-    <div class="seal seal-right">
-      🦭
-    </div>
-
-    <div class="scrapbook">
+    <div class="scrapbook letter-page">
 
       <p class="small-text">
-        something i wanted to tell you ♡
+        from me
       </p>
 
       <h2>
-        a letter for you
+        a little letter ♡
       </h2>
 
       <div class="letter-paper">
@@ -382,34 +344,41 @@
         </p>
 
         <p>
-          i don't really know how to put everything i feel into
-          words, but i just want you to know how thankful i am
-          for you. after everything we've been through, all the
-          good moments, random laughs, small fights, and everything
-          in between, i'm still grateful that i got to meet you
+          i don't really know how to put everything
+          i feel into words, but i just want you to
+          know how thankful i am for you.
+        </p>
+
+        <p>
+          after everything we've been through,
+          all the good moments, random laughs,
+          small fights, and everything in between,
+          i'm still grateful that i got to meet you
           and have you in my life.
         </p>
 
         <p>
-          i love all the little things about you. your smile,
-          your personality, your creativity, your patience, and
-          even the random things you do that somehow make me smile.
-          i don't always say it properly, but i notice and
-          appreciate more than you probably know.
+          i love all the little things about you.
+          your smile, your personality, your
+          creativity, your patience, and even the
+          random things you do that somehow make
+          me smile.
         </p>
 
         <p>
-          i know i'm not perfect, and i know there are things i
-          still need to learn and improve. but i'm thankful for
-          all the moments we've shared and for everything you've
-          taught me along the way.
+          i know i'm not perfect, and i know there
+          are things i still need to learn and improve.
+          but i'm thankful for all the moments we've
+          shared and for everything you've taught me
+          along the way.
         </p>
 
         <p>
-          today is your day, so i hope you enjoy every little part
-          of it. i hope this new year of your life brings you more
-          happiness, good memories, and things that make you proud
-          of yourself.
+          today is your day, so i hope you enjoy
+          every little part of it. i hope this new
+          year of your life brings you more happiness,
+          good memories, and things that make you
+          proud of yourself.
         </p>
 
         <p>
@@ -420,23 +389,19 @@
           happy 17th birthday. i love you always. ♡
         </p>
 
-        <p>
+        <p class="signature">
           — me 🦭
         </p>
 
       </div>
 
-      <div class="navigation">
-
-        <button onclick="nextPage('love')">
-          ← back
-        </button>
-
-        <button onclick="nextPage('messages')">
-          continue →
-        </button>
-
-      </div>
+      <button
+        class="main-button"
+        type="button"
+        data-next="messages"
+      >
+        see your messages ♡
+      </button>
 
     </div>
 
@@ -447,137 +412,195 @@
        MESSAGES
   ========================== -->
 
-  <section class="page" id="messages">
+  <section id="messages" class="page">
 
-    <div class="seal page-seal">
-      🦭
-    </div>
-
-    <div class="scrapbook">
+    <div class="scrapbook message-page">
 
       <p class="small-text">
-        you're loved by many ♡
+        people who love you ♡
       </p>
 
       <h2>
-        little messages
+        birthday messages
       </h2>
 
-      <!-- MAIN CHOICES -->
+      <p class="message-intro">
+        choose who you'd like to hear from ♡
+      </p>
 
-      <div class="message-choice" id="messageChoice">
 
-        <button onclick="openLetter('me')">
-          💌 from me
+      <!-- GROUP CHOICES -->
+
+      <div id="messageChoice" class="message-choice">
+
+        <button
+          class="choice-button"
+          type="button"
+          data-group="family"
+        >
+          💌 someone special
         </button>
 
-        <button onclick="showMessageGroup('family')">
-          🏠 family
+        <button
+          class="choice-button"
+          type="button"
+          data-group="friends"
+        >
+          💌 friends
         </button>
 
-        <button onclick="showMessageGroup('friends')">
-          🫶 friends
+        <button
+          class="choice-button"
+          type="button"
+          data-person="me"
+        >
+          🦭 from me
         </button>
 
       </div>
 
 
-      <!-- =========================
-           FAMILY
-      ========================== -->
+      <!-- FAMILY / SPECIAL -->
 
-      <div class="message-group" id="familyGroup">
+      <div
+        id="familyGroup"
+        class="message-group"
+      >
 
-        <h3>
-          choose a message ♡
-        </h3>
+        <p class="group-title">
+          someone special ♡
+        </p>
 
-        <div class="person-buttons">
+        <button
+          class="person-button"
+          type="button"
+          data-person="ate"
+        >
+          ate
+        </button>
 
-          <button onclick="openLetter('ate')">
-            ate
-          </button>
+        <button
+          class="person-button"
+          type="button"
+          data-person="soul"
+        >
+          soull
+        </button>
 
-          <button onclick="openLetter('soul')">
-            soul
-          </button>
+        <button
+          class="person-button"
+          type="button"
+          data-person="siena"
+        >
+          siena
+        </button>
 
-          <button onclick="openLetter('eros')">
-            eros
-          </button>
+        <button
+          class="person-button"
+          type="button"
+          data-person="eros"
+        >
+          eros
+        </button>
 
-          <button onclick="openLetter('margaux')">
-            margaux
-          </button>
+        <button
+          class="person-button"
+          type="button"
+          data-person="margaux"
+        >
+          margaux
+        </button>
 
-          <button onclick="openLetter('titaMeng')">
-            tita meng
-          </button>
-
-        </div>
+        <button
+          class="person-button"
+          type="button"
+          data-person="titaMeng"
+        >
+          tita meng
+        </button>
 
       </div>
 
 
-      <!-- =========================
-           FRIENDS
-      ========================== -->
+      <!-- FRIENDS -->
 
-      <div class="message-group" id="friendsGroup">
+      <div
+        id="friendsGroup"
+        class="message-group"
+      >
 
-        <h3>
-          choose a message ♡
-        </h3>
+        <p class="group-title">
+          friends ♡
+        </p>
 
-        <div class="person-buttons">
+        <button
+          class="person-button"
+          type="button"
+          data-person="giff"
+        >
+          giff
+        </button>
 
-          <button onclick="openLetter('giff')">
-            giff
-          </button>
+        <button
+          class="person-button"
+          type="button"
+          data-person="chloe"
+        >
+          chloe
+        </button>
 
-          <button onclick="openLetter('lyle')">
-            lyle
-          </button>
+        <button
+          class="person-button"
+          type="button"
+          data-person="aisha"
+        >
+          aisha
+        </button>
 
-        </div>
+        <button
+          class="person-button"
+          type="button"
+          data-person="lyle"
+        >
+          lyle
+        </button>
 
       </div>
 
 
-      <!-- =========================
-           INDIVIDUAL LETTER
-      ========================== -->
+      <!-- INDIVIDUAL LETTER -->
 
-      <div class="individual-letter" id="individualLetter">
+      <div
+        id="individualLetter"
+        class="individual-letter"
+      >
 
         <h3 id="letterName"></h3>
 
-        <div class="letter-paper">
+        <div
+          id="letterContent"
+          class="individual-content"
+        ></div>
 
-          <div id="letterContent"></div>
-
-        </div>
-
-        <button onclick="backToMessages()">
-          ← choose another message
+        <button
+          id="backMessages"
+          class="secondary-button"
+          type="button"
+        >
+          ← back to messages
         </button>
 
       </div>
 
 
-      <!-- NAVIGATION -->
-
-      <div class="navigation">
-
-        <button onclick="nextPage('letter')">
-          ← back
-        </button>
-
-        <button onclick="nextPage('final')">
-          continue →
-        </button>
-
-      </div>
+      <button
+        id="finishButton"
+        class="main-button"
+        type="button"
+        data-next="final"
+      >
+        finish ♡
+      </button>
 
     </div>
 
@@ -585,59 +608,51 @@
 
 
   <!-- =========================
-       FINAL
+       FINAL PAGE
   ========================== -->
 
-  <section class="page" id="final">
+  <section id="final" class="page">
 
-    <div class="seal seal-final-left">
-      🦭
-    </div>
+    <div class="scrapbook final-page">
 
-    <div class="seal seal-final-right">
-      🦭
-    </div>
-
-    <div class="scrapbook">
-
-      <div class="tulips">
-        🌷 🩷 🌷 💙 🌷
+      <div class="final-seal">
+        🦭
       </div>
 
       <h2>
         happy birthday, iyang ♡
       </h2>
 
-      <p>
+      <p class="final-message">
         i hope this little website made you smile,
         even just a little.
       </p>
 
-      <p>
-        thank you for being such a special person in my life
-        and for all the memories we've made together.
+      <p class="final-message">
+        thank you for being part of so many
+        memories in my life.
       </p>
 
-      <p>
-        here's to more laughs, more memories,
-        more random moments, and more birthdays. ♡
+      <p class="final-message">
+        i hope you have the happiest birthday
+        and an amazing year ahead.
       </p>
+
+      <div class="final-tulips">
+        🌷 🩷 🌷
+      </div>
 
       <p class="final-love">
-        i love you always 🦭♡
+        happy 17th birthday, my iyang ♡
       </p>
 
-      <div class="tulips">
-        🌷 🎀 🌷
-      </div>
-
-      <div class="navigation">
-
-        <button onclick="nextPage('messages')">
-          ← back
-        </button>
-
-      </div>
+      <button
+        class="secondary-button"
+        type="button"
+        data-next="cover"
+      >
+        ↻ start again
+      </button>
 
     </div>
 
@@ -651,5 +666,4 @@
   <script src="script.js"></script>
 
 </body>
-
 </html>
