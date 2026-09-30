@@ -18,12 +18,14 @@ function nextPage(pageId) {
   const next = document.getElementById(pageId);
 
   if (next) {
+
     next.classList.add("active");
 
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
+
   }
 }
 
@@ -34,38 +36,63 @@ function nextPage(pageId) {
 
 function openGift() {
 
-  const cover = document.getElementById("cover");
-  const giftReveal = document.getElementById("giftReveal");
-  const giftBox = document.getElementById("giftBox");
-  const giftMessage = document.getElementById("giftMessage");
+  const cover =
+    document.getElementById("cover");
 
-  if (!cover || !giftReveal || !giftBox || !giftMessage) {
+  const giftReveal =
+    document.getElementById("giftReveal");
+
+  const giftBox =
+    document.getElementById("giftBox");
+
+  const giftMessage =
+    document.getElementById("giftMessage");
+
+
+  if (
+    !cover ||
+    !giftReveal ||
+    !giftBox ||
+    !giftMessage
+  ) {
     return;
   }
 
+
   cover.classList.remove("active");
+
   giftReveal.classList.add("active");
+
 
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
 
+
   giftBox.classList.remove("open");
+
   giftMessage.classList.remove("show");
 
-  setTimeout(function() {
-    giftBox.classList.add("open");
-  }, 500);
 
   setTimeout(function() {
+
+    giftBox.classList.add("open");
+
+  }, 500);
+
+
+  setTimeout(function() {
+
     giftMessage.classList.add("show");
+
   }, 1300);
+
 }
 
 
 /* =================================
-   MESSAGE DATA
+   MESSAGE NAMES
 ================================= */
 
 const names = {
@@ -89,7 +116,12 @@ const names = {
 };
 
 
+/* =================================
+   MESSAGE CONTENT
+================================= */
+
 const messages = {
+
 
   me: `dear iyang,
 
@@ -232,9 +264,6 @@ const letterName =
 const letterContent =
   document.getElementById("letterContent");
 
-const finishButton =
-  document.getElementById("finishButton");
-
 
 /* =================================
    SHOW MESSAGE GROUP
@@ -251,20 +280,30 @@ function showMessageGroup(group) {
     return;
   }
 
+
   individualLetter.classList.remove("show");
 
   familyGroup.classList.remove("show");
+
   friendsGroup.classList.remove("show");
+
 
   messageChoice.style.display = "flex";
 
+
   if (group === "family") {
+
     familyGroup.classList.add("show");
+
   }
 
+
   if (group === "friends") {
+
     friendsGroup.classList.add("show");
+
   }
+
 
   setTimeout(function() {
 
@@ -274,6 +313,7 @@ function showMessageGroup(group) {
     });
 
   }, 100);
+
 }
 
 
@@ -294,12 +334,23 @@ function openLetter(person) {
     return;
   }
 
+
+  /* Hide choices */
+
   messageChoice.style.display = "none";
 
   familyGroup.classList.remove("show");
+
   friendsGroup.classList.remove("show");
 
-  letterName.textContent = names[person] || "";
+
+  /* Set name */
+
+  letterName.textContent =
+    names[person] || "";
+
+
+  /* Clear old content */
 
   letterContent.innerHTML = "";
 
@@ -308,11 +359,21 @@ function openLetter(person) {
 
   if (person === "margaux") {
 
-    const image = document.createElement("img");
+    const image =
+      document.createElement("img");
 
-    image.src = "images/margaux.jpg";
-    image.alt = "Margaux's birthday drawing";
-    image.className = "margaux-image";
+
+    image.src =
+      "images/margaux.jpg";
+
+
+    image.alt =
+      "Margaux's birthday drawing";
+
+
+    image.className =
+      "margaux-image";
+
 
     letterContent.appendChild(image);
 
@@ -323,13 +384,18 @@ function openLetter(person) {
 
   else {
 
-    letterContent.textContent = messages[person];
+    letterContent.textContent =
+      messages[person];
 
   }
 
 
+  /* Show letter */
+
   individualLetter.classList.add("show");
 
+
+  /* Scroll to letter */
 
   setTimeout(function() {
 
@@ -339,6 +405,7 @@ function openLetter(person) {
     });
 
   }, 100);
+
 }
 
 
@@ -357,12 +424,16 @@ function backToMessages() {
     return;
   }
 
+
   individualLetter.classList.remove("show");
 
   familyGroup.classList.remove("show");
+
   friendsGroup.classList.remove("show");
 
+
   messageChoice.style.display = "flex";
+
 
   setTimeout(function() {
 
@@ -372,6 +443,7 @@ function backToMessages() {
     });
 
   }, 100);
+
 }
 
 
@@ -385,85 +457,149 @@ function backToMessages() {
 const giftButton =
   document.getElementById("giftButton");
 
+
 if (giftButton) {
 
-  giftButton.addEventListener("click", function() {
-    openGift();
-  });
+  giftButton.addEventListener(
+    "click",
+    function() {
+
+      openGift();
+
+    }
+  );
 
 }
 
 
-/* All navigation buttons */
+/* =================================
+   NEXT BUTTONS
+================================= */
 
 const navigationButtons =
   document.querySelectorAll("[data-next]");
 
+
 navigationButtons.forEach(function(button) {
 
-  button.addEventListener("click", function() {
+  button.addEventListener(
+    "click",
+    function() {
 
-    const pageId =
-      button.getAttribute("data-next");
+      const pageId =
+        button.getAttribute("data-next");
 
-    if (pageId) {
-      nextPage(pageId);
+
+      if (pageId) {
+
+        nextPage(pageId);
+
+      }
+
     }
-
-  });
+  );
 
 });
 
 
-/* Message group buttons */
+/* =================================
+   BACK BUTTONS
+================================= */
+
+const backButtons =
+  document.querySelectorAll("[data-back]");
+
+
+backButtons.forEach(function(button) {
+
+  button.addEventListener(
+    "click",
+    function() {
+
+      const pageId =
+        button.getAttribute("data-back");
+
+
+      if (pageId) {
+
+        nextPage(pageId);
+
+      }
+
+    }
+  );
+
+});
+
+
+/* =================================
+   MESSAGE GROUP BUTTONS
+================================= */
 
 const groupButtons =
   document.querySelectorAll("[data-group]");
 
+
 groupButtons.forEach(function(button) {
 
-  button.addEventListener("click", function() {
+  button.addEventListener(
+    "click",
+    function() {
 
-    const group =
-      button.getAttribute("data-group");
+      const group =
+        button.getAttribute("data-group");
 
-    showMessageGroup(group);
 
-  });
+      showMessageGroup(group);
+
+    }
+  );
 
 });
 
 
-/* Individual person buttons */
+/* =================================
+   INDIVIDUAL PERSON BUTTONS
+================================= */
 
 const personButtons =
   document.querySelectorAll("[data-person]");
 
+
 personButtons.forEach(function(button) {
 
-  button.addEventListener("click", function() {
+  button.addEventListener(
+    "click",
+    function() {
 
-    const person =
-      button.getAttribute("data-person");
+      const person =
+        button.getAttribute("data-person");
 
-    openLetter(person);
 
-  });
+      openLetter(person);
+
+    }
+  );
 
 });
 
 
-/* Back button */
+/* =================================
+   BACK TO MESSAGE LIST
+================================= */
 
 const backMessages =
   document.getElementById("backMessages");
+
 
 if (backMessages) {
 
   backMessages.addEventListener(
     "click",
     function() {
+
       backToMessages();
+
     }
   );
 
@@ -477,40 +613,68 @@ if (backMessages) {
 const startAgain =
   document.querySelector('[data-next="cover"]');
 
+
 if (startAgain) {
 
-  startAgain.addEventListener("click", function() {
+  startAgain.addEventListener(
+    "click",
+    function() {
 
-    const giftBox =
-      document.getElementById("giftBox");
 
-    const giftMessage =
-      document.getElementById("giftMessage");
+      /* Reset gift */
 
-    if (giftBox) {
-      giftBox.classList.remove("open");
+      const giftBox =
+        document.getElementById("giftBox");
+
+
+      const giftMessage =
+        document.getElementById("giftMessage");
+
+
+      if (giftBox) {
+
+        giftBox.classList.remove("open");
+
+      }
+
+
+      if (giftMessage) {
+
+        giftMessage.classList.remove("show");
+
+      }
+
+
+      /* Reset messages */
+
+      if (individualLetter) {
+
+        individualLetter.classList.remove("show");
+
+      }
+
+
+      if (familyGroup) {
+
+        familyGroup.classList.remove("show");
+
+      }
+
+
+      if (friendsGroup) {
+
+        friendsGroup.classList.remove("show");
+
+      }
+
+
+      if (messageChoice) {
+
+        messageChoice.style.display = "flex";
+
+      }
+
     }
-
-    if (giftMessage) {
-      giftMessage.classList.remove("show");
-    }
-
-    if (individualLetter) {
-      individualLetter.classList.remove("show");
-    }
-
-    if (familyGroup) {
-      familyGroup.classList.remove("show");
-    }
-
-    if (friendsGroup) {
-      friendsGroup.classList.remove("show");
-    }
-
-    if (messageChoice) {
-      messageChoice.style.display = "flex";
-    }
-
-  });
+  );
 
 }
