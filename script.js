@@ -90,8 +90,6 @@ const names = {
 
   soul: "soull",
 
-  siena: "siena",
-
   eros: "eros",
 
   margaux: "margaux",
@@ -99,10 +97,6 @@ const names = {
   titaMeng: "tita meng",
 
   giff: "giff",
-
-  chloe: "chloe",
-
-  aisha: "aisha",
 
   lyle: "lyle"
 
@@ -154,17 +148,6 @@ And most especially, you taught us how forgiveness can change one's heart.
 With this celebration that expresses your gratefulness, we all may remind you that you are loved forever by those you know and may not know.
 
 This world loves your smile and your heart, and we hope you have a blessed day.`,
-
-
-  siena: `happy birthday, iyang! ♡
-
-i hope you have a really good birthday and that you get to enjoy your day with the people who care about you.
-
-i hope this year brings you more happy moments, new memories, and lots of reasons to smile.
-
-always take care of yourself and remember that there are people who love and appreciate you.
-
-enjoy your day, iyang! 🌷`,
 
 
   eros: `Happiest 17th Birthday cousin my love!
@@ -222,26 +205,6 @@ Happiest Birthday, Dianna!
 enjoy your day and i love you as always. 🌷🩷
 
 lovelots, gip:)`,
-
-
-  chloe: `happy birthday, iyang! ♡
-
-i hope you have an amazing birthday and get to spend it with the people who make you happy.
-
-thank you for all the memories and random moments we've shared. i hope we get to make more memories together soon.
-
-enjoy your special day and don't forget to smile a lot! 🌷`,
-
-
-  aisha: `happy birthday, iyang! 🩷
-
-i hope your birthday is filled with good food, good people, and lots of happy moments.
-
-you deserve a really nice day, so enjoy every second of it!
-
-i'm wishing you more happiness, good memories, and success this year.
-
-happy birthdayyy! 🎀`,
 
 
   lyle: `happii 17th, yangg !!
