@@ -1,6 +1,7 @@
 // ==================== PAGE NAVIGATION ====================
 
 function nextPage(pageId) {
+
   const pages = document.querySelectorAll(".page");
 
   pages.forEach(page => {
@@ -23,11 +24,13 @@ const giftBox = document.getElementById("giftBox");
 const giftMessage = document.getElementById("giftMessage");
 
 if (giftButton) {
+
   giftButton.addEventListener("click", function () {
 
     nextPage("giftReveal");
 
     setTimeout(() => {
+
       giftBox.classList.add("open");
 
       setTimeout(() => {
@@ -37,6 +40,7 @@ if (giftButton) {
     }, 500);
 
   });
+
 }
 
 
@@ -49,17 +53,13 @@ function showMessageGroup(group) {
   const individualLetter = document.getElementById("individualLetter");
   const messageChoice = document.getElementById("messageChoice");
 
-  // Hide individual letter
   individualLetter.classList.remove("show");
 
-  // Show main choices
   messageChoice.style.display = "flex";
 
-  // Hide both groups
   familyGroup.classList.remove("show");
   friendsGroup.classList.remove("show");
 
-  // Show selected group
   if (group === "family") {
     familyGroup.classList.add("show");
   }
@@ -67,10 +67,11 @@ function showMessageGroup(group) {
   if (group === "friends") {
     friendsGroup.classList.add("show");
   }
+
 }
 
 
-// ==================== LETTER DATA ====================
+// ==================== NAMES ====================
 
 const names = {
 
@@ -93,9 +94,9 @@ const names = {
 };
 
 
-const messages = {
+// ==================== MESSAGES ====================
 
-  // ==================== FROM ME ====================
+const messages = {
 
   me: `dear iyang,
 
@@ -116,8 +117,6 @@ happy 17th birthday. i love you always. ♡
 — me 🦭`,
 
 
-  // ==================== ATE ====================
-
   ate: `happiest birthday, yanna !
 
 wishing u a good year ahead. i hope u get to achieve all the things ure aiming for and that things work out for u the way u want them to.
@@ -131,8 +130,6 @@ and pls remember that ur more than enough, so don’t be too hard on urself.
 enjoy ur day ok !`,
 
 
-  // ==================== SOUL ====================
-
   soul: `Happiest 17th birthday to the sweetest girl that surfaced from the horizon!
 
 On this special day, the world was given a blessing to meet someone like you. A strong independent girl, raised to be a shoulder to anyone that's hurt.
@@ -145,8 +142,6 @@ With this celebration that expresses your gratefulness, we all may remind you th
 
 This world loves your smile and your heart, and we hope you have a blessed day.`,
 
-
-  // ==================== EROS ====================
 
   eros: `Happiest 17th Birthday cousin my love!
 
@@ -165,8 +160,6 @@ Yun lang naman hindi ko na papahabain, love you so much cousin my love miss na m
 Happy Birthdih 🥰😘😍🫶🎉😝🎊🥳`,
 
 
-  // ==================== MARGAUX ====================
-
   margaux: `happy birthday, iyang! ♡
 
 i hope you have a really nice birthday and enjoy your special day.
@@ -178,8 +171,6 @@ always take care of yourself and remember that you are loved.
 enjoy your day! ♡`,
 
 
-  // ==================== TITA MENG ====================
-
   titaMeng: `happy 17th birthday, iyang! ♡
 
 wishing you a happy and meaningful birthday.
@@ -188,8 +179,6 @@ may you continue to grow into the person you want to become and may you always b
 
 enjoy your special day and always take care! ♡`,
 
-
-  // ==================== GIFF ====================
 
   giff: `To my Numbawan Bestfriend!
 
@@ -224,8 +213,6 @@ enjoy your day and i love you as always. 🌷🩷
 lovelots, gip:)`,
 
 
-  // ==================== LYLE ====================
-
   lyle: `happii 17th, yangg !!
 
 another step closer to reaching unc.
@@ -243,7 +230,7 @@ i miss you lots and i’m really happy you’re one of the people I get to call 
 };
 
 
-// ==================== OPEN A LETTER ====================
+// ==================== OPEN LETTER ====================
 
 function openLetter(person) {
 
@@ -255,33 +242,30 @@ function openLetter(person) {
   const letterName = document.getElementById("letterName");
   const letterContent = document.getElementById("letterContent");
 
-  // Hide main choices
   messageChoice.style.display = "none";
 
-  // Hide groups
   familyGroup.classList.remove("show");
   friendsGroup.classList.remove("show");
 
-  // Set name
   letterName.textContent = names[person] || "a message for you ♡";
 
-  // Set message
   letterContent.textContent = messages[person] || "message coming soon ♡";
 
-  // Show letter
   individualLetter.classList.add("show");
 
-  // Scroll to the letter
   setTimeout(() => {
+
     individualLetter.scrollIntoView({
       behavior: "smooth",
       block: "start"
     });
+
   }, 100);
+
 }
 
 
-// ==================== BACK TO MESSAGE CHOICES ====================
+// ==================== BACK TO MESSAGES ====================
 
 function backToMessages() {
 
@@ -290,21 +274,20 @@ function backToMessages() {
   const friendsGroup = document.getElementById("friendsGroup");
   const individualLetter = document.getElementById("individualLetter");
 
-  // Hide letter
   individualLetter.classList.remove("show");
 
-  // Hide groups
   familyGroup.classList.remove("show");
   friendsGroup.classList.remove("show");
 
-  // Show main choices
   messageChoice.style.display = "flex";
 
-  // Scroll back to the choices
   setTimeout(() => {
+
     messageChoice.scrollIntoView({
       behavior: "smooth",
       block: "center"
     });
+
   }, 100);
+
 }
