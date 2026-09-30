@@ -1,13 +1,8 @@
-/* ==================== RESET ==================== */
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
-
-/* ==================== BODY ==================== */
 
 body {
   font-family: Georgia, serif;
@@ -15,9 +10,6 @@ body {
   color: #55404a;
   min-height: 100vh;
 }
-
-
-/* ==================== ALL PAGES ==================== */
 
 .page {
   min-height: 100vh;
@@ -33,9 +25,6 @@ body {
   display: flex;
 }
 
-
-/* ==================== SCRAPBOOK ==================== */
-
 .scrapbook {
   background: #fffdf7;
   width: min(90%, 650px);
@@ -49,9 +38,6 @@ body {
   position: relative;
   z-index: 2;
 }
-
-
-/* ==================== TEXT ==================== */
 
 .small-text {
   color: #9a7182;
@@ -83,9 +69,6 @@ p {
   margin-bottom: 30px;
 }
 
-
-/* ==================== BUTTONS ==================== */
-
 button {
   border: none;
   background: #e5a5bd;
@@ -110,7 +93,7 @@ button:active {
 }
 
 
-/* ==================== STICKERS ==================== */
+/* STICKERS */
 
 .sticker {
   position: absolute;
@@ -143,7 +126,7 @@ button:active {
 }
 
 
-/* ==================== SEALS ==================== */
+/* SEALS */
 
 .seal {
   position: absolute;
@@ -189,13 +172,8 @@ button:active {
   margin-bottom: 15px;
 }
 
-
-/* ==================== FLOATING ANIMATION ==================== */
-
 @keyframes float {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0) rotate(-5deg);
   }
 
@@ -205,7 +183,7 @@ button:active {
 }
 
 
-/* ==================== NAVIGATION ==================== */
+/* NAVIGATION */
 
 .navigation {
   display: flex;
@@ -216,7 +194,7 @@ button:active {
 }
 
 
-/* ==================== MEMORY ==================== */
+/* MEMORIES */
 
 .memory-grid {
   display: grid;
@@ -227,7 +205,7 @@ button:active {
 
 .memory-card {
   background: #f6e7ec;
-  padding: 35px 15px;
+  padding: 12px;
   border: 2px solid #ead1da;
   transform: rotate(-1deg);
 }
@@ -236,13 +214,23 @@ button:active {
   transform: rotate(1deg);
 }
 
+.memory-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 12px;
+  border: 4px solid #fffdf7;
+  box-shadow: 3px 3px 0 #d8b9c7;
+}
+
 .memory-card p {
   font-size: 14px;
-  margin: 10px 0 0;
+  margin: 10px 0 5px;
 }
 
 
-/* ==================== THINGS I LOVE ==================== */
+/* THINGS I LOVE */
 
 .love-list {
   text-align: left;
@@ -257,7 +245,7 @@ button:active {
 }
 
 
-/* ==================== LETTER ==================== */
+/* LETTER */
 
 .letter-paper {
   background: #fff9e8;
@@ -273,7 +261,7 @@ button:active {
 }
 
 
-/* ==================== GIFT REVEAL ==================== */
+/* GIFT */
 
 .gift-reveal {
   text-align: center;
@@ -293,9 +281,6 @@ button:active {
 .gift-opening-text {
   margin-bottom: 5px;
 }
-
-
-/* ==================== GIFT BOX ==================== */
 
 .gift-box {
   position: relative;
@@ -353,9 +338,6 @@ button:active {
   font-size: 45px;
 }
 
-
-/* ==================== GIFT OPEN ANIMATION ==================== */
-
 .gift-box.open .gift-lid {
   transform: translateY(-110px) rotate(-6deg);
   opacity: 0;
@@ -364,9 +346,6 @@ button:active {
 .gift-box.open {
   transform: translateY(30px);
 }
-
-
-/* ==================== GIFT MESSAGE ==================== */
 
 .gift-message {
   opacity: 0;
@@ -400,7 +379,7 @@ button:active {
 }
 
 
-/* ==================== MESSAGES ==================== */
+/* MESSAGES */
 
 .message-choice {
   display: flex;
@@ -430,9 +409,6 @@ button:active {
   margin-bottom: 8px;
 }
 
-
-/* ==================== PERSON BUTTONS ==================== */
-
 .person-buttons {
   display: flex;
   justify-content: center;
@@ -444,9 +420,6 @@ button:active {
 .person-buttons button {
   min-width: 130px;
 }
-
-
-/* ==================== INDIVIDUAL LETTER ==================== */
 
 .individual-letter {
   display: none;
@@ -463,13 +436,12 @@ button:active {
   margin-bottom: 15px;
 }
 
-/* Keeps the letter's paragraphs and line breaks */
 .individual-letter #letterContent {
   white-space: pre-line;
 }
 
 
-/* ==================== FINAL PAGE ==================== */
+/* FINAL */
 
 .final-love {
   font-size: 20px;
@@ -483,23 +455,7 @@ button:active {
 }
 
 
-/* ==================== SCROLLBAR ==================== */
-
-.scrapbook::-webkit-scrollbar {
-  width: 7px;
-}
-
-.scrapbook::-webkit-scrollbar-track {
-  background: #f8edf1;
-}
-
-.scrapbook::-webkit-scrollbar-thumb {
-  background: #d8b9c7;
-  border-radius: 10px;
-}
-
-
-/* ==================== MOBILE ==================== */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -541,6 +497,10 @@ button:active {
     grid-template-columns: 1fr;
   }
 
+  .memory-card img {
+    height: 220px;
+  }
+
   p {
     font-size: 16px;
   }
@@ -577,5 +537,4 @@ button:active {
   .letter-paper p {
     font-size: 15px;
   }
-
 }
