@@ -19,6 +19,7 @@ function nextPage(pageId) {
 
   if (next) {
     next.classList.add("active");
+
     window.scrollTo({
       top: 0,
       behavior: "smooth"
@@ -42,8 +43,6 @@ function openGift() {
     return;
   }
 
-  /* Change page */
-
   cover.classList.remove("active");
   giftReveal.classList.add("active");
 
@@ -52,28 +51,15 @@ function openGift() {
     behavior: "smooth"
   });
 
-
-  /* Reset animation */
-
   giftBox.classList.remove("open");
   giftMessage.classList.remove("show");
 
-
-  /* Open the gift */
-
   setTimeout(function() {
-
     giftBox.classList.add("open");
-
   }, 500);
 
-
-  /* Show gift message */
-
   setTimeout(function() {
-
     giftMessage.classList.add("show");
-
   }, 1300);
 }
 
@@ -256,10 +242,12 @@ const finishButton =
 
 function showMessageGroup(group) {
 
-  if (!messageChoice ||
-      !familyGroup ||
-      !friendsGroup ||
-      !individualLetter) {
+  if (
+    !messageChoice ||
+    !familyGroup ||
+    !friendsGroup ||
+    !individualLetter
+  ) {
     return;
   }
 
@@ -270,16 +258,13 @@ function showMessageGroup(group) {
 
   messageChoice.style.display = "flex";
 
-
   if (group === "family") {
     familyGroup.classList.add("show");
   }
 
-
   if (group === "friends") {
     friendsGroup.classList.add("show");
   }
-
 
   setTimeout(function() {
 
@@ -298,31 +283,23 @@ function showMessageGroup(group) {
 
 function openLetter(person) {
 
-  if (!messageChoice ||
-      !familyGroup ||
-      !friendsGroup ||
-      !individualLetter ||
-      !letterName ||
-      !letterContent) {
+  if (
+    !messageChoice ||
+    !familyGroup ||
+    !friendsGroup ||
+    !individualLetter ||
+    !letterName ||
+    !letterContent
+  ) {
     return;
   }
-
-
-  /* Hide choices */
 
   messageChoice.style.display = "none";
 
   familyGroup.classList.remove("show");
   friendsGroup.classList.remove("show");
 
-
-  /* Set name */
-
-  letterName.textContent =
-    names[person] || "";
-
-
-  /* Clear old content */
+  letterName.textContent = names[person] || "";
 
   letterContent.innerHTML = "";
 
@@ -335,7 +312,6 @@ function openLetter(person) {
 
     image.src = "images/margaux.jpg";
     image.alt = "Margaux's birthday drawing";
-
     image.className = "margaux-image";
 
     letterContent.appendChild(image);
@@ -347,18 +323,13 @@ function openLetter(person) {
 
   else {
 
-    letterContent.textContent =
-      messages[person] || "message coming soon ♡";
+    letterContent.textContent = messages[person];
 
   }
 
 
-  /* Show letter */
-
   individualLetter.classList.add("show");
 
-
-  /* Scroll to letter */
 
   setTimeout(function() {
 
@@ -377,13 +348,14 @@ function openLetter(person) {
 
 function backToMessages() {
 
-  if (!messageChoice ||
-      !familyGroup ||
-      !friendsGroup ||
-      !individualLetter) {
+  if (
+    !messageChoice ||
+    !familyGroup ||
+    !friendsGroup ||
+    !individualLetter
+  ) {
     return;
   }
-
 
   individualLetter.classList.remove("show");
 
@@ -391,7 +363,6 @@ function backToMessages() {
   friendsGroup.classList.remove("show");
 
   messageChoice.style.display = "flex";
-
 
   setTimeout(function() {
 
@@ -500,21 +471,6 @@ if (backMessages) {
 
 
 /* =================================
-   FINISH BUTTON
-================================= */
-
-if (finishButton) {
-
-  finishButton.addEventListener("click", function() {
-
-    nextPage("final");
-
-  });
-
-}
-
-
-/* =================================
    START AGAIN
 ================================= */
 
@@ -524,8 +480,6 @@ const startAgain =
 if (startAgain) {
 
   startAgain.addEventListener("click", function() {
-
-    /* Reset gift animation */
 
     const giftBox =
       document.getElementById("giftBox");
@@ -540,9 +494,6 @@ if (startAgain) {
     if (giftMessage) {
       giftMessage.classList.remove("show");
     }
-
-
-    /* Reset messages */
 
     if (individualLetter) {
       individualLetter.classList.remove("show");
